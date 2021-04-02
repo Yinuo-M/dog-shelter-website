@@ -25,6 +25,13 @@ html {
 	color: var(--text-black);
 }
 
+body {
+	background-color: var(--background-white);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 ul {
 	list-style: none;
 }
@@ -103,12 +110,13 @@ footer {
 	background: url("assets/home/home-page-hug-dog.jpg") center/cover, var(--background-white);
 	background-position: center;
 	background-size: cover;
-	height: calc(100vh - 4.5rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
 	z-index: 1;
+	height: calc(100vh - 4.5rem);
+	
 }
 
 #intro::before {
@@ -162,6 +170,7 @@ footer {
 #home-footer {
 	background: var(--footer-blue);
 	color: var(--background-white);
+	margin-top: auto;
 }
 
 /*ANCHOR homepage specifics*/
