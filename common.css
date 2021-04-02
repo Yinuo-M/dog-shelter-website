@@ -1,5 +1,3 @@
-/* TODO Remember to restyle the outline for button:focus*/
-
 /* ANCHOR reset tags */
 
 *,
@@ -10,14 +8,25 @@
 	box-sizing: inherit;
 }
 
+:root {
+	--banner-blue: #b9d9e0;
+	--banner-hover-blue: #91b9c4;
+	--background-white: #f7ede2;
+	--button-pink: #f4acb7;
+	--button-hover-pink: #ce9099;
+	--text-black: #292525;
+	--footer-blue: #161a1d;
+}
+
 html {
 	box-sizing: border-box;
 	font-size: 16px;
 	font-family: "Quicksand", sans-serif;
+	color: var(--text-black);
 }
 
 body {
-	background: #f7ede2;
+	
 }
 
 ul {
@@ -35,32 +44,29 @@ button {
 	font-family: inherit;
 }
 
-button:focus {
-	outline: 0;
-}
-
 footer {
 	min-height: 7rem;
 }
 
 /* ANCHOR main navigation */
 
-/* TODO change nav colour
-        put a filter before the background image to dim it a bit*/
 #main-nav {
-	background: #caf0f8;
+	background: var(--banner-blue);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
-	padding: 0.5rem 1rem;
 	height: 4.5rem;
+	box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.3);
+	position: relative;
+	z-index: 2;
 }
 
 #nav-header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem 1rem;
 }
 
 #nav-logo {
@@ -74,22 +80,48 @@ footer {
 
 #nav-list {
 	white-space: nowrap;
+	height: 100%;
 }
 
 .nav-list-item {
 	display: inline-block;
-	margin: 0 1.2rem;
+	height: 100%;
+}
+
+.nav-link {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 1.2rem;
 	font-size: 1.4rem;
+}
+
+.nav-link:hover {
+	transition: background 0.2s;
+	background: var(--banner-hover-blue);
 }
 
 /* ANCHOR main page intro */
 
 #intro {
-	background: url(assets/home-page-hug-dog.jpg) center/cover;
+	background: url(assets/home-page-hug-dog.jpg) center/cover, var(--background-white);
 	height: calc(100vh - 4.5rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+}
+
+#intro::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(21, 22, 22, 0.1);
 }
 
 #home-header {
@@ -99,11 +131,14 @@ footer {
 	font-weight: 300;
 	padding: 2rem 1rem;
 	text-shadow: 1px 1px 10px rgb(49, 48, 48);
+	z-index: 1;
+	position: relative;
 }
 
 #home-main {
 	margin: 4rem auto;
 	text-align: center;
+	z-index: 1;
 }
 
 #view-dogs-button {
@@ -111,22 +146,29 @@ footer {
 	font-weight: bold;
 	padding: 1rem 1.3rem;
 	border-radius: 8px;
-	background: #f4acb7;
-	color: #252323;
+	background: var(--button-pink);
 	cursor: pointer;
 	box-shadow: 0 3px 15px 0.5px rgba(21, 22, 22, 0.7);
+	position: relative;
 }
 
 #view-dogs-button:hover {
 	transition: all 0.2s;
-	background: #80a3a0;
+	background: var(--button-hover-pink);
 }
 
 #view-dogs-button:focus {
-	/*TODO create a focused outline*/
+	border: 10px solid var(--background-white);
 }
 
 #home-footer {
-	background: #161a1d;
-	color: #f7ede2;
+	background: var(--footer-blue);
+	color: var(--background-white);
+}
+
+/*ANCHOR homepage specifics*/
+.nav-link.home {
+	font-weight: bold;
+	text-decoration: underline;
+	text-underline-offset: 8px;
 }
