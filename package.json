@@ -1,0 +1,10 @@
+{
+  "name": "dog-shelter-page",
+  "version": "1.0.0",
+  "description": "A simple dog shelter website",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Yinuo Meng",
+  "license": "MIT"
+}

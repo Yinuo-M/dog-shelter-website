@@ -1,0 +1,132 @@
+/* TODO Remember to restyle the outline for button:focus*/
+
+/* ANCHOR reset tags */
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Quicksand", sans-serif;
+}
+
+body {
+	background: #f7ede2;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	background: none;
+	font-family: inherit;
+}
+
+button:focus {
+	outline: 0;
+}
+
+footer {
+	min-height: 7rem;
+}
+
+/* ANCHOR main navigation */
+
+/* TODO change nav colour
+        put a filter before the background image to dim it a bit*/
+#main-nav {
+	background: #caf0f8;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	padding: 0.5rem 1rem;
+	height: 4.5rem;
+}
+
+#nav-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-logo {
+	margin-right: 1rem;
+}
+
+#nav-title {
+	font-family: "Courgette", cursive;
+	font-size: 1.7rem;
+}
+
+#nav-list {
+	white-space: nowrap;
+}
+
+.nav-list-item {
+	display: inline-block;
+	margin: 0 1.2rem;
+	font-size: 1.4rem;
+}
+
+/* ANCHOR main page intro */
+
+#intro {
+	background: url(assets/home-page-hug-dog.jpg) center/cover;
+	height: calc(100vh - 4.5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#home-header {
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 300;
+	padding: 2rem 1rem;
+	text-shadow: 1px 1px 10px rgb(49, 48, 48);
+}
+
+#home-main {
+	margin: 4rem auto;
+	text-align: center;
+}
+
+#view-dogs-button {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 1rem 1.3rem;
+	border-radius: 8px;
+	background: #f4acb7;
+	color: #252323;
+	cursor: pointer;
+	box-shadow: 0 3px 15px 0.5px rgba(21, 22, 22, 0.7);
+}
+
+#view-dogs-button:hover {
+	transition: all 0.2s;
+	background: #80a3a0;
+}
+
+#view-dogs-button:focus {
+	/*TODO create a focused outline*/
+}
+
+#home-footer {
+	background: #161a1d;
+	color: #f7ede2;
+}
