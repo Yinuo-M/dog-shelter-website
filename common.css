@@ -100,7 +100,7 @@ footer {
 /* ANCHOR main page intro */
 
 #intro {
-	background: url("assets/home-page-hug-dog.jpg") center/cover, var(--background-white);
+	background: url("assets/home/home-page-hug-dog.jpg") center/cover, var(--background-white);
 	background-position: center;
 	background-size: cover;
 	height: calc(100vh - 4.5rem);
