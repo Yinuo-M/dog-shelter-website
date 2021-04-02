@@ -1,4 +1,4 @@
-//ANCHOR navbar
+//ANCHOR homepage background images
 
 //ANCHOR buttons
 const buttons = document.querySelectorAll("button");
