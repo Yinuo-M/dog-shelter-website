@@ -1,0 +1,57 @@
+/*TODO crop the dog profiles to square 250*250*/
+
+:root {
+	--banner-blue: #b9d9e0;
+	--banner-hover-blue: #91b9c4;
+	--background-white: #f7ede2;
+	--button-pink: #f4acb7;
+	--button-hover-pink: #ce9099;
+	--text-black: #292525;
+	--footer-blue: #161a1d;
+}
+
+.nav-link.meet-our-dogs {
+	font-weight: bold;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+}
+
+#list-header {
+  text-align: center;
+  padding:2rem 0 3rem 0;
+}
+
+#list-title {
+  font-size: 5rem;
+  text-shadow: 0.5px 0.5px 1px rgb(128, 122, 122);
+}
+
+#list-header-text {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#dogs {
+  padding: 0 7rem 5rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dog-preview {
+  border: 1px solid black;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile-wrapper {
+  text-align: center;
+}
+
+.dog-preview img {
+  height: 250px;
+  width: 250px;
+  border-radius:50%;
+}
