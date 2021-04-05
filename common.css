@@ -97,17 +97,18 @@ footer {
 	align-items: center;
 	padding: 0 1.2rem;
 	font-size: 1.4rem;
+	transition: background 0.2s;
 }
 
 .nav-link:hover {
-	transition: background 0.2s;
 	background: var(--banner-hover-blue);
 }
 
 /* ANCHOR main page intro */
 
 #intro {
-	background: url("assets/home/home-page-hug-dog.jpg") center/cover, var(--background-white);
+	background: url("assets/home/home-page-hug-dog.jpg") center/cover,
+		var(--background-white);
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -116,7 +117,6 @@ footer {
 	position: relative;
 	z-index: 1;
 	height: calc(100vh - 4.5rem);
-	
 }
 
 #intro::before {
@@ -156,10 +156,10 @@ footer {
 	cursor: pointer;
 	box-shadow: 0 3px 15px 0.5px rgba(21, 22, 22, 0.7);
 	position: relative;
+	transition: background 0.2s;
 }
 
 #view-dogs-button:hover {
-	transition: all 0.2s;
 	background: var(--button-hover-pink);
 }
 
