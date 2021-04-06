@@ -112,7 +112,7 @@
 }
 
 .location::before {
-	content: url(../assets/common/paw-location.png);
+	content: url(../../assets/common/paw-location.png);
 	position: relative;
 	right: 7px;
 	top: 3px;
