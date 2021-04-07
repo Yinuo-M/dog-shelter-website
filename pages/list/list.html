@@ -54,7 +54,18 @@
 			</p>
 		</header>
 		<main id="list-main">
+			<form id="filter bar">
+				<label for="sort">Sort by</label>
+				<select name="sort" id="sort">
+					<option value="alphabets" class="sort-option" selected>A-Z</option>
+					<option value="age-ascend" class="sort-option">Age (ascending)</option>
+					<option value="age-descend" class="sort-option">Age (descending)</option>
+				</select>
+			
+			</form>
 			<ul id="dogs"></ul>
+			<button class="standard-button load-more-button">Load more</button>
+			<button class="standard-button back-to-top-button">Back to top</button>
 		</main>
 		<footer id="home-footer">
 			Icons are designed by

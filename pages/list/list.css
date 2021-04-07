@@ -117,3 +117,16 @@
 	right: 7px;
 	top: 3px;
 }
+
+.load-more-button {
+	display: block;
+	margin: 0 auto 4rem auto;
+	box-shadow: 0 2px 5px rgb(95, 93, 93);
+}
+
+.back-to-top-button {
+	display: none;
+	margin: 0 auto 4rem auto;
+	box-shadow: 0 2px 5px rgb(95, 93, 93);
+}
+

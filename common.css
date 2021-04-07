@@ -98,6 +98,7 @@ footer {
 	padding: 0 1.2rem;
 	font-size: 1.4rem;
 	transition: background 0.2s;
+	background: white;
 }
 
 .nav-link:hover {

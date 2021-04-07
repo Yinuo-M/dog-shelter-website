@@ -13,6 +13,9 @@ function cancelDefault(e) {
 }
 
 //ANCHOR list page dog profiles
+//TODO make something that remember the position on the list to come back to.
+
+let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 let listStatus = {
 	done: false,
 	index: 0,
@@ -22,18 +25,18 @@ let listStatus = {
 function populatePage(list) {
 	const startIndex = listStatus.index;
 	const endIndex = listStatus.index + listStatus.itemsPerPage;
-	const displayList = list.slice(startIndex, endIndex);
+	const listToInsert = list.slice(startIndex, endIndex);
 
-	displayList.forEach((dog) => {
+	listToInsert.forEach((dog) => {
 		const previewList = document.getElementById("dogs");
-		const index = dog.index + 1;
+		const index = dog.index;
 		const html = `
 		<li class="dog-preview">
 		<img
 			width="200"
 			height="200"
 			src="../../assets/dogs/dog${index}/profile${index}.jpg"
-			alt=${dog.alt};
+			alt="${dog.alt}";
 		/>
 		<ul class="info-list">
 			<li class="location">${dog.location}</li>
@@ -53,14 +56,30 @@ function populatePage(list) {
 		previewList.insertAdjacentHTML("beforeend", html);
 	});
 
-	if (list.length === endIndex) {
-		listStatus.done = true;
-	} else {
-		listStatus.done = false;
-	}
-	listStatus.index += listStatus.itemsPerPage - 1;
+	const numOnScreen = document.querySelectorAll(".dog-preview").length;
+
+	listStatus.done = list.length === numOnScreen ? true : false;
+	listStatus.index += listStatus.itemsPerPage;
 }
 
-populatePage(dogList);
-
 const loadButton = document.querySelector(".load-more-button");
+const backToTopButton = document.querySelector(".back-to-top-button");
+loadButton.addEventListener("click", loadMore);
+backToTopButton.addEventListener("click", scrollToTop);
+
+function loadMore() {
+	populatePage(displayList);
+	if (listStatus.done) {
+		loadButton.style.display = "none";
+		backToTopButton.style.display = "block";
+	} else {
+		loadButton.style.display = "block";
+		backToTopButton.style.display = "none";
+	}
+}
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}
+
+populatePage(displayList);
