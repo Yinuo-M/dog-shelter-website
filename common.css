@@ -51,6 +51,7 @@ footer {
 	min-height: 7rem;
 }
 
+
 /* ANCHOR main navigation */
 
 #main-nav {
@@ -89,6 +90,7 @@ footer {
 .nav-list-item {
 	display: inline-block;
 	height: 100%;
+	margin-left: -5px;
 }
 
 .nav-link {
@@ -98,7 +100,6 @@ footer {
 	padding: 0 1.2rem;
 	font-size: 1.4rem;
 	transition: background 0.2s;
-	background: white;
 }
 
 .nav-link:hover {

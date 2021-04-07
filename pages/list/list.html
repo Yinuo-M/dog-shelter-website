@@ -54,14 +54,36 @@
 			</p>
 		</header>
 		<main id="list-main">
-			<form id="filter bar">
-				<label for="sort">Sort by</label>
-				<select name="sort" id="sort">
-					<option value="alphabets" class="sort-option" selected>A-Z</option>
-					<option value="age-ascend" class="sort-option">Age (ascending)</option>
-					<option value="age-descend" class="sort-option">Age (descending)</option>
-				</select>
-			
+			<form id="filter-bar">
+				<div class="input-wrapper">
+					<label for="sort">Sort by</label>
+					<select name="sort" class="dropdown" id="sort">
+						<option value="alphabets" class="option" selected>A-Z</option>
+						<option value="age-ascend" class="option">Age (ascending)</option>
+						<option value="age-descend" class="option">Age (descending)</option>
+					</select>
+				</div>
+
+				<div class="input-wrapper">
+					<label for="region">Region</label>
+					<select name="region" class="dropdown" id="region">
+						<option value="any" class="option" selected>Any</option>
+						<option value="england" class="option">England</option>
+						<option value="wales" class="option">Wales</option>
+						<option value="scotland" class="option">Scotland</option>
+						<option value="northern-ireland" class="option">
+							Northern Ireland
+						</option>
+					</select>
+				</div>
+				<div class="input-wrapper">
+					<label for="min-age">Min age</label>
+					<input type="number" name="min-age" id="min-age" max="12" min="0" value="0"/>
+				</div>
+				<div class="input-wrapper">
+					<label for="max-age">Max age</label>
+					<input type="number" name="max-age" id="max-age" max="12" min="0" value="13"/>
+				</div>
 			</form>
 			<ul id="dogs"></ul>
 			<button class="standard-button load-more-button">Load more</button>

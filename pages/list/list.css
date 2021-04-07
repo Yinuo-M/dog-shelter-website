@@ -32,6 +32,39 @@
 	padding: 1rem 1rem 0 1rem;
 }
 
+
+#filter-bar {
+  position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	font-size: 1.3rem;
+	margin: 0 auto 3rem auto;
+	padding: 1.4rem;
+	background: rgb(233, 224, 213);
+	z-index: 100;
+	border-top: 1px solid rgb(219, 209, 209);
+	border-bottom: 1px solid rgba(219, 209, 209);
+}
+
+.input-wrapper {
+	padding: 0 0.7rem 0 0.7rem;
+}
+
+select, input {
+	border: 1px solid rgb(219, 209, 209);
+	font-size: 1rem;
+	color: var(--text-black);
+	padding: 0.2rem;
+	background: rgb(255, 252, 252);
+	font-family: inherit;
+}
+
+select:focus, input:focus {
+	border: solid var(--banner-hover-blue) 2px;
+	outline: none;	
+}
+
 #dogs {
 	padding: 0 4rem 3rem 4rem;
 	display: flex;
