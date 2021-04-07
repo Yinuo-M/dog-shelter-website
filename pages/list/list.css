@@ -32,9 +32,8 @@
 	padding: 1rem 1rem 0 1rem;
 }
 
-
 #filter-bar {
-  position: sticky;
+	position: sticky;
 	top: 0;
 	display: flex;
 	justify-content: center;
@@ -51,7 +50,8 @@
 	padding: 0 0.7rem 0 0.7rem;
 }
 
-select, input {
+select,
+input {
 	border: 1px solid rgb(219, 209, 209);
 	font-size: 1rem;
 	color: var(--text-black);
@@ -60,9 +60,10 @@ select, input {
 	font-family: inherit;
 }
 
-select:focus, input:focus {
+select:focus,
+input:focus {
 	border: solid var(--banner-hover-blue) 2px;
-	outline: none;	
+	outline: none;
 }
 
 #dogs {
@@ -163,3 +164,12 @@ select:focus, input:focus {
 	box-shadow: 0 2px 5px rgb(95, 93, 93);
 }
 
+#error {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	color: var(--text-blue);
+	margin: auto;
+	display: none;
+	transition: all 0.2s;
+}

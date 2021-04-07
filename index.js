@@ -60,6 +60,10 @@ function populatePage(list) {
 
 	listStatus.done = list.length === numOnScreen ? true : false;
 	listStatus.index += listStatus.itemsPerPage;
+
+	toggleButtons();
+	const sorryMessage = document.getElementById("error");
+	sorryMessage.style.display = "none";
 }
 
 const loadButton = document.querySelector(".load-more-button");
@@ -69,6 +73,9 @@ backToTopButton.addEventListener("click", scrollToTop);
 
 function loadMore() {
 	populatePage(displayList);
+}
+
+function toggleButtons() {
 	if (listStatus.done) {
 		loadButton.style.display = "none";
 		backToTopButton.style.display = "block";
@@ -88,8 +95,8 @@ const minAgeInput = document.getElementById("min-age");
 const maxAgeInput = document.getElementById("max-age");
 sortByInput.addEventListener("change", sortDogs);
 regionInput.addEventListener("change", sortDogs);
-minAgeInput.addEventListener("change", sortDogs);
-maxAgeInput.addEventListener("change", sortDogs);
+minAgeInput.addEventListener("input", sortDogs);
+maxAgeInput.addEventListener("input", sortDogs);
 
 function sortDogs() {
 	const sortBy = sortByInput.value;
@@ -114,6 +121,12 @@ function sortDogs() {
 	const previewList = document.getElementById("dogs");
 	previewList.innerHTML = "";
 	resetStatus();
+
+	if (displayList.length === 0) {
+		noMatchFound();
+		return;
+	}
+
 	populatePage(displayList);
 }
 
@@ -123,6 +136,14 @@ function resetStatus() {
 		index: 0,
 		itemsPerPage: 5,
 	};
+}
+
+function noMatchFound() {
+	const sorryMessage = document.getElementById("error");
+	sorryMessage.style.display = "block";
+
+	loadButton.style.display = "none";
+	backToTopButton.style.display = "none";
 }
 
 populatePage(displayList);
