@@ -164,10 +164,6 @@ footer {
 	background: var(--button-hover-pink);
 }
 
-.standard-button:focus {
-	border: 10px solid var(--background-white);
-}
-
 #home-footer {
 	background: var(--footer-blue);
 	color: var(--background-white);

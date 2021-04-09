@@ -32,6 +32,7 @@ function populatePage(list) {
 		const index = dog.index;
 		const html = `
 		<li class="dog-preview">
+		<a class="preview-anchor" href="../profile/profile.html">
 		<img
 			width="200"
 			height="200"
@@ -50,6 +51,7 @@ function populatePage(list) {
 				</li>
 			</div>
 		</ul>
+		</a>
 	</li>
 		`;
 

@@ -62,8 +62,7 @@ input {
 
 select:focus,
 input:focus {
-	border: solid var(--banner-hover-blue) 2px;
-	outline: none;
+	outline: solid var(--banner-hover-blue) 2px;
 }
 
 #dogs {
@@ -75,14 +74,10 @@ input:focus {
 }
 
 .dog-preview {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	background: rgba(255, 255, 255, 0.9);
 	width: 100%;
 	max-width: 50rem;
 	margin-bottom: 3rem;
-	padding: 2rem 3rem;
 	border-radius: 10px;
 	border: 1px solid rgb(236, 232, 232);
 	box-shadow: 0 0 20px rgb(214, 203, 203);
@@ -99,6 +94,13 @@ input:focus {
 .dog-preview img {
 	border-radius: 50%;
 	box-shadow: 0 0 5px rgb(95, 93, 93);
+}
+
+.preview-anchor {
+	padding: 2rem 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .info-list {
@@ -171,5 +173,14 @@ input:focus {
 	color: var(--text-blue);
 	margin: auto;
 	display: none;
-	transition: all 0.2s;
+	animation: fade-in 0.3s;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
