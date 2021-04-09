@@ -3,7 +3,7 @@
 :root {
 	--banner-blue: #b9d9e0;
 	--banner-hover-blue: #91b9c4;
-	--text-blue: #377B8B;
+	--text-blue: #377b8b;
 	--background-white: #f7ede2;
 	--button-pink: #f4acb7;
 	--button-hover-pink: #ce9099;
@@ -13,8 +13,8 @@
 
 #profile-main {
 	padding: 4rem 0;
-	margin: 4rem auto;
-	width: 90%;
+	margin: auto;
+	width: 85%;
 	max-width: 70rem;
 	background: rgb(252, 250, 248);
 	border-radius: 15px;
@@ -36,7 +36,7 @@
 }
 
 .image-info-wrapper {
-	max-width: 90%;
+	margin: 0 1rem;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -78,37 +78,42 @@
 }
 
 .doginalities {
-	margin: 4rem auto 4rem auto;
+	margin: 2rem auto 4rem auto;
 	padding: 1rem;
 	width: 90%;
 	max-width: 60rem;
 }
 
 .doginalities h1 {
-  color: var(--text-blue);
-  text-align: center;
-  font-size: 3rem;
+	color: var(--text-blue);
+	text-align: center;
+	font-size: 3rem;
 }
 
 .doginalities-list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.8rem;
-  padding-top: 1.5rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.8rem;
+	padding-top: 1.5rem;
 }
 
 .doginalities-wrapper {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .doginalities-item {
-  line-height: 3rem;
+	line-height: 3rem;
 }
 
 .doginalities-item::before {
-  content: url(../../assets/common/favicon.ico);
-  position: relative;
-  top: 0.7rem;
+	content: url(../../assets/common/favicon.ico);
+	position: relative;
+	top: 0.7rem;
+}
+
+.adopt {
+  display: block;
+  margin: auto;
 }
