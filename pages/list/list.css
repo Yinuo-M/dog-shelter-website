@@ -3,7 +3,7 @@
 :root {
 	--banner-blue: #b9d9e0;
 	--banner-hover-blue: #91b9c4;
-	--text-blue: #497983;
+	--text-blue: #377B8B;
 	--background-white: #f7ede2;
 	--button-pink: #f4acb7;
 	--button-hover-pink: #ce9099;
@@ -74,13 +74,13 @@ input:focus {
 }
 
 .dog-preview {
-	background: rgba(255, 255, 255, 0.9);
+	background: rgb(252, 250, 248);
 	width: 100%;
 	max-width: 50rem;
 	margin-bottom: 3rem;
 	border-radius: 10px;
 	border: 1px solid rgb(236, 232, 232);
-	box-shadow: 0 0 20px rgb(214, 203, 203);
+	box-shadow: 0 15px 10px -6px rgb(214, 203, 203);
 	transition: box-shadow 0.2s, transform 0.2s;
 	cursor: pointer;
 	position: relative;
@@ -88,7 +88,7 @@ input:focus {
 
 .dog-preview:hover {
 	transform: scale(1.05);
-	box-shadow: 0 0 20px rgb(187, 172, 172);
+	box-shadow: 0 15px 10px -6px rgb(190, 180, 180);
 }
 
 .dog-preview img {
@@ -157,7 +157,7 @@ input:focus {
 .load-more-button {
 	display: block;
 	margin: 0 auto 4rem auto;
-	box-shadow: 0 2px 5px rgb(95, 93, 93);
+	box-shadow: 0 6px 8px -5px rgb(95, 93, 93);
 }
 
 .back-to-top-button {

@@ -1,0 +1,114 @@
+/*TODO center the image-info-wrapper*/
+
+:root {
+	--banner-blue: #b9d9e0;
+	--banner-hover-blue: #91b9c4;
+	--text-blue: #377B8B;
+	--background-white: #f7ede2;
+	--button-pink: #f4acb7;
+	--button-hover-pink: #ce9099;
+	--text-black: #292525;
+	--footer-blue: #161a1d;
+}
+
+#profile-main {
+	padding: 4rem 0;
+	margin: 4rem auto;
+	width: 90%;
+	max-width: 70rem;
+	background: rgb(252, 250, 248);
+	border-radius: 15px;
+	border: 1px solid rgb(236, 232, 232);
+	box-shadow: 0 0 20px rgb(214, 203, 203);
+}
+
+.profile-header {
+	text-align: center;
+	font-size: 4.5rem;
+	font-weight: bold;
+	color: rgb(58, 54, 54);
+	text-shadow: 1px 1px 2px rgb(192, 187, 187);
+	padding-bottom: 2rem;
+}
+
+.name {
+	color: rgb(230, 119, 137);
+}
+
+.image-info-wrapper {
+	max-width: 90%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-wrapper {
+	margin: 0 1.5rem;
+}
+
+.dog-image {
+	border-radius: 10px;
+}
+
+.about {
+	margin: 0 1.5rem;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+}
+
+.about h1 {
+	font-size: 3rem;
+	background: rgb(252, 250, 248);
+	padding: 0 1rem 1rem 0;
+	color: var(--text-blue);
+	position: relative;
+	top: 2rem;
+	display: inline-block;
+}
+
+.dog-info-list {
+	padding: 2rem;
+	border: 2px solid rgb(182, 179, 179);
+}
+
+.highlight {
+	font-weight: bold;
+}
+
+.doginalities {
+	margin: 4rem auto 4rem auto;
+	padding: 1rem;
+	width: 90%;
+	max-width: 60rem;
+}
+
+.doginalities h1 {
+  color: var(--text-blue);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.doginalities-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8rem;
+  padding-top: 1.5rem;
+}
+
+.doginalities-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.doginalities-item {
+  line-height: 3rem;
+}
+
+.doginalities-item::before {
+  content: url(../../assets/common/favicon.ico);
+  position: relative;
+  top: 0.7rem;
+}
