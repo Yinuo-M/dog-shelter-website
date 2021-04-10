@@ -1,3 +1,5 @@
+import "./common.css";
+
 //ANCHOR buttons
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) =>

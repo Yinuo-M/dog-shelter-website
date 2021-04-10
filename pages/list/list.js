@@ -1,8 +1,10 @@
 //TODO make something that remember the position on the list to come back to.
 
-import dogList from "../../dogs.js";
-let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
+import "./list.css";
+import dogList from "../../dogs";
+console.log(dogList);
 
+let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 let listStatus = {
 	done: false,
 	index: 0,
@@ -19,7 +21,7 @@ function populatePage(list) {
 		const index = dog.index;
 		const html = `
 		<li class="dog-preview">
-		<a class="preview-anchor" href="../profile/profile.html">
+		<a class="preview-anchor" href="profile.html">
 		<img
 			width="200"
 			height="200"
