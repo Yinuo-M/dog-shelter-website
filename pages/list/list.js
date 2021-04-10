@@ -1,19 +1,6 @@
-import dogList from "./dogs.js";
-
-//ANCHOR homepage background images
-
-//ANCHOR buttons
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) =>
-	button.addEventListener("mousedown", cancelDefault)
-);
-
-function cancelDefault(e) {
-	e.preventDefault();
-}
-
-//ANCHOR list page dog profiles
 //TODO make something that remember the position on the list to come back to.
+
+import dogList from "../../dogs.js";
 let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 
 let listStatus = {

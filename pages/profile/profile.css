@@ -1,4 +1,6 @@
 /*TODO center the image-info-wrapper*/
+/*TODO crop and compress the images*/
+/*TODO create a fade in/slide in effect for the dog list as you scroll to them*/
 
 :root {
 	--banner-blue: #b9d9e0;
@@ -12,23 +14,49 @@
 }
 
 #profile-main {
-	padding: 4rem 0;
-	margin: auto;
+	padding: 4rem;
+  padding-top: 2rem;
+	margin: 4rem auto;
 	width: 85%;
 	max-width: 70rem;
 	background: rgb(252, 250, 248);
 	border-radius: 15px;
 	border: 1px solid rgb(236, 232, 232);
 	box-shadow: 0 0 20px rgb(214, 203, 203);
+  position: relative;
+}
+
+.back {
+  font-size: 1.3rem;
+  color:rgb(121, 111, 111);
+  position: relative;
+  color:var(--text-blue);
+  right: 3rem;
+  font-weight: bold;
+  bottom: 1rem;
+  transition: color 0.1s;
+}
+
+.back::before {
+  content: url(../../assets/common/left-arrow.png);
+  position: relative;
+  top: 0.3rem;
+  right: 0.1rem;
+} 
+
+.back:hover {
+  color: var(--text-black);
 }
 
 .profile-header {
 	text-align: center;
-	font-size: 4.5rem;
+	font-size: 4rem;
 	font-weight: bold;
 	color: rgb(58, 54, 54);
 	text-shadow: 1px 1px 2px rgb(192, 187, 187);
-	padding-bottom: 2rem;
+	padding: 1rem 0 2rem 0;
+  transform: scale(0.95) translate(0, 50px);
+  opacity: 0;
 }
 
 .name {
@@ -59,7 +87,7 @@
 }
 
 .about h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	background: rgb(252, 250, 248);
 	padding: 0 1rem 1rem 0;
 	color: var(--text-blue);
@@ -87,7 +115,7 @@
 .doginalities h1 {
 	color: var(--text-blue);
 	text-align: center;
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 
 .doginalities-list {
@@ -113,7 +141,12 @@
 	top: 0.7rem;
 }
 
-.adopt {
-  display: block;
-  margin: auto;
+.button-wrapper {
+  text-align: center;
+}
+
+/*ANCHOR animation classes*/
+.show {
+  opacity: 1;
+  transform: scale(1);
 }

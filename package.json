@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "A simple dog shelter website",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Yinuo Meng",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
