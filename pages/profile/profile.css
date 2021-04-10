@@ -15,7 +15,7 @@
 
 #profile-main {
 	padding: 4rem;
-  padding-top: 2rem;
+	padding-top: 2rem;
 	margin: 4rem auto;
 	width: 85%;
 	max-width: 70rem;
@@ -23,29 +23,29 @@
 	border-radius: 15px;
 	border: 1px solid rgb(236, 232, 232);
 	box-shadow: 0 0 20px rgb(214, 203, 203);
-  position: relative;
+	position: relative;
 }
 
 .back {
-  font-size: 1.3rem;
-  color:rgb(121, 111, 111);
-  position: relative;
-  color:var(--text-blue);
-  right: 3rem;
-  font-weight: bold;
-  bottom: 1rem;
-  transition: color 0.1s;
+	font-size: 1.3rem;
+	color: rgb(121, 111, 111);
+	position: relative;
+	color: var(--text-blue);
+	right: 3rem;
+	font-weight: bold;
+	bottom: 1rem;
+	transition: color 0.1s;
 }
 
 .back::before {
-  content: url(../../assets/common/left-arrow.png);
-  position: relative;
-  top: 0.3rem;
-  right: 0.1rem;
-} 
+	content: url(../../assets/common/left-arrow.png);
+	position: relative;
+	top: 0.3rem;
+	right: 0.1rem;
+}
 
 .back:hover {
-  color: var(--text-black);
+	color: var(--text-black);
 }
 
 .profile-header {
@@ -55,8 +55,7 @@
 	color: rgb(58, 54, 54);
 	text-shadow: 1px 1px 2px rgb(192, 187, 187);
 	padding: 1rem 0 2rem 0;
-  transform: scale(0.95) translate(0, 50px);
-  opacity: 0;
+	animation: slide-up 0.3s both;
 }
 
 .name {
@@ -70,6 +69,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	animation: slide-up 0.3s 0.4s both;
 }
 
 .image-wrapper {
@@ -142,11 +142,30 @@
 }
 
 .button-wrapper {
-  text-align: center;
+	text-align: center;
 }
 
 /*ANCHOR animation classes*/
+.hide {
+	opacity: 0;
+	transform: scale(0.95) translate(0, 50px);
+}
+
 .show {
-  opacity: 1;
-  transform: scale(1);
+	opacity: 1;
+	transform: scale(1) translate(0, 0);
+	transition: all 0.3s;
+}
+
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: scale(0.95) translate(0, 50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1) translate(0, 0);
+	}
 }

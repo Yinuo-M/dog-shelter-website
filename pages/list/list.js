@@ -2,7 +2,6 @@
 
 import "./list.css";
 import dogList from "../../dogs";
-console.log(dogList);
 
 let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 let listStatus = {
