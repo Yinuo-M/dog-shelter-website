@@ -5,12 +5,19 @@ import dogList from "../../dogs";
 
 //ANCHOR loading and back to top buttons
 
+const loadButton = document.querySelector(".load-more-button");
+const backToTopButton = document.querySelector(".back-to-top-button");
+loadButton.addEventListener("click", loadMore);
+backToTopButton.addEventListener("click", scrollToTop);
+
 let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 let listStatus = {
 	done: false,
 	index: 0,
 	itemsPerPage: 5,
 };
+
+populatePage(displayList);
 
 function populatePage(list) {
 	const startIndex = listStatus.index;
@@ -22,7 +29,7 @@ function populatePage(list) {
 		const index = dog.index;
 		const html = `
 		<li class="dog-preview">
-		<a class="preview-anchor" href="profile.html">
+		<a class="preview-anchor" href="profile${index}.html">
 		<img
 			width="200"
 			height="200"
@@ -57,13 +64,6 @@ function populatePage(list) {
 	const sorryMessage = document.getElementById("error");
 	sorryMessage.style.display = "none";
 }
-
-populatePage(displayList);
-
-const loadButton = document.querySelector(".load-more-button");
-const backToTopButton = document.querySelector(".back-to-top-button");
-loadButton.addEventListener("click", loadMore);
-backToTopButton.addEventListener("click", scrollToTop);
 
 function loadMore() {
 	populatePage(displayList);
@@ -146,4 +146,23 @@ function jumpToTop() {
 	window.scrollTo(0, 0);
 }
 
-function autoSave() {}
+//ANCHOR filter autosave
+applyButton.addEventListener("click", autoSave);
+document.addEventListener("DOMContentLoaded", applyFilter);
+
+function applyFilter() {
+	if (!sessionStorage.getItem("sortBy")) return;
+
+	sortByInput.value = sessionStorage.getItem("sortBy");
+	regionInput.value = sessionStorage.getItem("region");
+	minAgeInput.value = sessionStorage.getItem("minAge");
+	maxAgeInput.value = sessionStorage.getItem("maxAge");
+	sortDogs();
+}
+
+function autoSave() {
+	sessionStorage.setItem("sortBy", sortByInput.value);
+	sessionStorage.setItem("region", regionInput.value);
+	sessionStorage.setItem("minAge", minAgeInput.value);
+	sessionStorage.setItem("maxAge", maxAgeInput.value);
+}
