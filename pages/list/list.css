@@ -3,7 +3,7 @@
 :root {
 	--banner-blue: #b9d9e0;
 	--banner-hover-blue: #91b9c4;
-	--text-blue: #377B8B;
+	--text-blue: #377b8b;
 	--background-white: #f7ede2;
 	--button-pink: #f4acb7;
 	--button-hover-pink: #ce9099;
@@ -37,9 +37,10 @@
 	top: 0;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	font-size: 1.3rem;
 	margin: 0 auto 3rem auto;
-	padding: 1.4rem;
+	padding: 0.5em;
 	background: rgb(233, 224, 213);
 	z-index: 100;
 	border-top: 1px solid rgb(219, 209, 209);
@@ -47,7 +48,8 @@
 }
 
 .input-wrapper {
-	padding: 0 0.7rem 0 0.7rem;
+	padding-right: 0.7rem;
+	text-align: center;
 }
 
 select,
@@ -63,6 +65,12 @@ input {
 select:focus,
 input:focus {
 	outline: solid var(--banner-hover-blue) 2px;
+}
+
+.apply {
+	font-size: 1.3rem;
+	padding: 0.5rem;
+	box-shadow: none;
 }
 
 #dogs {
@@ -84,6 +92,7 @@ input:focus {
 	transition: box-shadow 0.2s, transform 0.2s;
 	cursor: pointer;
 	position: relative;
+	animation: slide-up 0.5s;
 }
 
 .dog-preview:hover {
@@ -182,5 +191,17 @@ input:focus {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: scale(0.95) translate(0, 50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1) translate(0, 0);
 	}
 }

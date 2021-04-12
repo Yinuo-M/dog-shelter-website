@@ -83,10 +83,8 @@ const sortByInput = document.getElementById("sort");
 const regionInput = document.getElementById("region");
 const minAgeInput = document.getElementById("min-age");
 const maxAgeInput = document.getElementById("max-age");
-sortByInput.addEventListener("change", sortDogs);
-regionInput.addEventListener("change", sortDogs);
-minAgeInput.addEventListener("input", sortDogs);
-maxAgeInput.addEventListener("input", sortDogs);
+const applyButton = document.querySelector(".apply");
+applyButton.addEventListener("click", sortDogs);
 
 function sortDogs() {
 	const sortBy = sortByInput.value;
