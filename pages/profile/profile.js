@@ -1,6 +1,6 @@
 import "../../common.css";
 import "./profile.css";
-import { debounce } from "lodash";
+import debounce from "lodash-es/debounce";
 
 const doginalities = document.querySelector(".doginalities");
 const adoptButton = document.querySelector(".adopt");

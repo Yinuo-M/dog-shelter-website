@@ -3,6 +3,8 @@
 import "./list.css";
 import dogList from "../../dogs";
 
+//ANCHOR loading and back to top buttons
+
 let displayList = [...dogList].sort((a, b) => (a.name > b.name ? 1 : -1));
 let listStatus = {
 	done: false,
@@ -56,6 +58,8 @@ function populatePage(list) {
 	sorryMessage.style.display = "none";
 }
 
+populatePage(displayList);
+
 const loadButton = document.querySelector(".load-more-button");
 const backToTopButton = document.querySelector(".back-to-top-button");
 loadButton.addEventListener("click", loadMore);
@@ -79,12 +83,16 @@ function scrollToTop() {
 	window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
 
+//ANCHOR the filter
+
 const sortByInput = document.getElementById("sort");
 const regionInput = document.getElementById("region");
 const minAgeInput = document.getElementById("min-age");
 const maxAgeInput = document.getElementById("max-age");
 const applyButton = document.querySelector(".apply");
 applyButton.addEventListener("click", sortDogs);
+applyButton.addEventListener("click", jumpToTop);
+applyButton.addEventListener("click", autoSave);
 
 function sortDogs() {
 	const sortBy = sortByInput.value;
@@ -134,4 +142,8 @@ function noMatchFound() {
 	backToTopButton.style.display = "none";
 }
 
-populatePage(displayList);
+function jumpToTop() {
+	window.scrollTo(0, 0);
+}
+
+function autoSave() {}

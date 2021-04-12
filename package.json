@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"core-js": "^3.10.1",
-		"lodash": "^4.17.21",
+		"lodash-es": "^4.17.21",
 		"workbox-webpack-plugin": "^6.1.2"
 	},
 	"devDependencies": {
