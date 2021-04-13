@@ -28,9 +28,9 @@ module.exports = {
 			filename: "list.html",
 		}),
 		new HTMLWebpackPlugin({
-			template: "./pages/profile/profile0.html",
+			template: "./pages/profile/Andy-profile.html",
 			chunks: ["common", "profile"],
-			filename: "profile0.html",
+			filename: "Andy-profile.html",
 		}),
 	],
 };

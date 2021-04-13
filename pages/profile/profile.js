@@ -5,7 +5,7 @@ import { update } from "lodash";
 
 //ANCHOR animation
 
-const doginalities = document.querySelector(".doginalities");
+const doginalities = document.querySelector(".doginalities-list");
 const adoptButton = document.querySelector(".adopt");
 
 window.addEventListener("scroll", debounce(slideUp, 100));
@@ -13,7 +13,7 @@ window.addEventListener("scroll", debounce(slideUp, 100));
 function slideUp() {
 	[doginalities, adoptButton].forEach((elem) => {
 		const threshold =
-			document.documentElement.clientHeight - elem.offsetHeight * 0.1;
+			document.documentElement.clientHeight;
 		const top = elem.getBoundingClientRect().top;
 		if (top < threshold) {
 			elem.classList.add("show");

@@ -53,7 +53,7 @@
 	color: rgb(58, 54, 54);
 	text-shadow: 1px 1px 2px rgb(192, 187, 187);
 	padding: 1rem 0 2rem 0;
-	animation: slide-up 0.3s both;
+	
 }
 
 .name {
@@ -66,7 +66,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	animation: slide-up 0.3s 0.4s both;
+	animation: slide-up 0.8s both;
 }
 
 .image-wrapper {
@@ -80,6 +80,8 @@
 	border-radius: 10px;
 	height: auto;
 	width: 100%;
+	top: 0;
+	left: 0;
 	position: absolute;
 	transition: transform 0.8s;
 }
@@ -238,7 +240,7 @@
 .show {
 	opacity: 1;
 	transform: scale(1) translate(0, 0);
-	transition: all 0.3s;
+	transition: transform 0.5s, opacity 0.5s;
 }
 
 @keyframes slide-up {

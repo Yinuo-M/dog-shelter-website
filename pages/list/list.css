@@ -90,7 +90,7 @@ input:focus {
 	border-radius: 10px;
 	border: 1px solid rgb(236, 232, 232);
 	box-shadow: 0 15px 10px -6px rgb(214, 203, 203);
-	transition: box-shadow 0.2s, transform 0.2s;
+	transition: box-shadow 0.4s, transform 0.4s;
 	cursor: pointer;
 	position: relative;
 	animation: slide-up 0.5s;

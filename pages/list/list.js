@@ -26,14 +26,13 @@ function populatePage(list) {
 
 	listToInsert.forEach((dog) => {
 		const previewList = document.getElementById("dogs");
-		const index = dog.index;
 		const html = `
 		<li class="dog-preview">
-		<a class="preview-anchor" href="profile${index}.html">
+		<a class="preview-anchor" href="${dog.name}-profile.html">
 		<img
 			width="200"
 			height="200"
-			src="../../assets/dogs/dog${index}/profile${index}.jpg"
+			src="../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg"
 			alt="${dog.alt}";
 		/>
 		<ul class="info-list">
