@@ -5,6 +5,7 @@ module.exports = {
 		common: "./common.js",
 		list: "./pages/list/list.js",
 		profile: "./pages/profile/profile.js",
+		form: "./pages/form/form.js",
 	},
 	target: "web",
 	devServer: {
@@ -31,6 +32,11 @@ module.exports = {
 			template: "./pages/profile/Andy-profile.html",
 			chunks: ["common", "profile"],
 			filename: "Andy-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/form/form.html",
+			chunks: ["common", "form"],
+			filename: "form.html",
 		}),
 	],
 };

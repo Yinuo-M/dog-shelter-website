@@ -12,8 +12,7 @@ window.addEventListener("scroll", debounce(slideUp, 100));
 
 function slideUp() {
 	[doginalities, adoptButton].forEach((elem) => {
-		const threshold =
-			document.documentElement.clientHeight;
+		const threshold = document.documentElement.clientHeight;
 		const top = elem.getBoundingClientRect().top;
 		if (top < threshold) {
 			elem.classList.add("show");
@@ -81,3 +80,13 @@ function updateDots() {
 	dots.forEach((dot) => dot.classList.remove("active"));
 	dots[index].classList.add("active");
 }
+
+//ANCHOR touch event for carousel
+const carousel = document.querySelector(".image-wrapper");
+const carouselHammer = new Hammer(carousel);
+carouselHammer.addEventListener("swipeleft", () => {
+	prevButton.click();
+});
+carouselHammer.addEventListener("swiperight", () => {
+	nextButton.click();
+});

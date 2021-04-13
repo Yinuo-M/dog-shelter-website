@@ -240,7 +240,7 @@
 .show {
 	opacity: 1;
 	transform: scale(1) translate(0, 0);
-	transition: transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s, background 0.3s;
 }
 
 @keyframes slide-up {
