@@ -9,31 +9,45 @@
 	--footer-blue: #161a1d;
 }
 
-button,
 input,
 select,
 textarea {
 	font-family: inherit;
-	font-size: 100%;
+	font-size: 1.2rem;
 	box-sizing: border-box;
-	padding: 0;
 	margin: 0;
+	width: 100%;
+	padding: 0.3rem;
+	border: rgb(102, 100, 100) 1.5px solid;
+	box-shadow: 0 5px 2px -3px rgb(199, 198, 198);
+	position: relative;
 }
 
 textarea {
 	overflow: auto;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1.5px var(--text-blue) solid;
+	box-shadow: 0 0 3px 1px rgb(3, 100, 107), 0 7px 3px -3px rgb(199, 198, 198);
+	border: rgb(102, 100, 100) 1.5px solid;
+}
+
 #form-main {
-	padding: 3rem;
-	padding-bottom: 4rem;
+	padding: 3rem 7rem;
 	margin: 4rem auto;
 	max-width: 85%;
-	background: rgb(252, 250, 248);
+	background: rgb(255, 255, 255);
 	border-radius: 15px;
 	border: 1px solid rgb(236, 232, 232);
 	box-shadow: 0 0 20px rgb(214, 203, 203);
 	position: relative;
+}
+
+.adopt-form {
+	max-width: 40rem;
 }
 
 .form-heading {
@@ -47,6 +61,7 @@ textarea {
 
 .advice {
 	font-weight: bold;
+	font-size: 1.2rem;
 	color: var(--text-blue);
 }
 
@@ -58,12 +73,77 @@ textarea {
 }
 
 .input-wrapper {
-	margin: 0.5rem 0;
+	margin: 1rem 0;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
 
-input {
-	width: 100%;
+label {
+	font-size: 1.2rem;
+	color: var(--text-black);
+	padding-bottom: 0.2rem;
+	font-weight: bold;
+}
+
+.requirement {
+	display: block;
+	font-weight: 400;
+	font-size: 1rem;
+	color: rgb(77, 74, 74);
+	padding: 0.2rem 0;
+}
+
+.required {
+	color: rgb(211, 8, 8);
+}
+
+.source {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	border: rgb(102, 100, 100) 1.5px solid;
+	box-shadow: 0 5px 2px -3px rgb(199, 198, 198);
+	padding: 1rem;
+}
+
+.source-legend {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.radio-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin: 0.7rem 0;
+	justify-content: center;
+}
+
+input[type="radio"] {
+	outline: none;
+	box-shadow: none;
+	margin: 0.3rem;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+  background: var(--button-pink) content-box;
+	padding: 8px;
+  transition: padding 0.2s;
+}
+
+input[type="radio"]:checked {
+	padding: 2px;
+}
+
+.js-focus-visible input[type="radio"]:focus-visible {
+	outline: 1px solid red;
+}
+
+.submit-button {
+  width: 100%;
+  margin-bottom: 0;
 }
