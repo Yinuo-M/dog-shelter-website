@@ -53,7 +53,6 @@
 	color: rgb(58, 54, 54);
 	text-shadow: 1px 1px 2px rgb(192, 187, 187);
 	padding: 1rem 0 2rem 0;
-	
 }
 
 .name {
@@ -88,7 +87,7 @@
 
 .dog-image.active {
 	position: relative;
-  z-index: 1;
+	z-index: 1;
 }
 
 .dog-image.prev {
@@ -104,7 +103,7 @@
 	z-index: 2;
 	top: 48%;
 	background: rgba(255, 255, 255, 0.7);
-  display: flex;
+	display: flex;
 	padding: 5px;
 	align-items: center;
 	justify-content: center;
@@ -120,8 +119,9 @@
 	opacity: 1;
 }
 
-.carousel-button:hover {
-	background: rgba(255, 255, 255, 0.5)
+.carousel-button:hover,
+.carousel-button:focus {
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .carousel-button img {
@@ -148,7 +148,8 @@
 	transition: opacity 0.2s;
 }
 
-.image-wrapper:hover > .dots {
+.image-wrapper:hover > .dots,
+.carousel-button:hover {
 	opacity: 1;
 }
 
@@ -163,7 +164,7 @@
 }
 
 .dot.active {
-	background: linear-gradient(rgb(109, 109, 109),black);
+	background: linear-gradient(rgb(109, 109, 109), black);
 	box-shadow: 0 1px 2px rgb(80, 77, 77);
 }
 
@@ -241,6 +242,10 @@
 	opacity: 1;
 	transform: scale(1) translate(0, 0);
 	transition: transform 0.5s, opacity 0.5s, background 0.3s;
+}
+
+.full-opacity {
+	opacity: 1;
 }
 
 @keyframes slide-up {

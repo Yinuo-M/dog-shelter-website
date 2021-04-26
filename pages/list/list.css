@@ -40,11 +40,15 @@
 	align-items: center;
 	font-size: 1.3rem;
 	margin: 0 auto 3rem auto;
-	padding: 0.5em;
+	padding: 0.7rem;
 	background: rgb(233, 224, 213);
 	z-index: 100;
 	border-top: 1px solid rgb(219, 209, 209);
 	border-bottom: 1px solid rgba(219, 209, 209);
+}
+
+.input-list {
+	display: flex;
 }
 
 .input-wrapper {
@@ -64,7 +68,7 @@ input {
 
 select:focus,
 input:focus {
-	outline: solid var(--banner-hover-blue) 2px;
+	outline: solid var(--banner-hover-blue) 4px;
 }
 
 .apply {
@@ -72,6 +76,7 @@ input:focus {
 	padding: 0.5rem;
 	box-shadow: none;
 	border-radius: 7px;
+	margin: 0;
 }
 
 #dogs {
@@ -111,6 +116,10 @@ input:focus {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.js-focus-visible .preview-anchor:focus-visible {
+ outline: 5px rgb(77, 75, 75) solid;
 }
 
 .info-list {
@@ -174,6 +183,11 @@ input:focus {
 	display: none;
 	margin: 0 auto 4rem auto;
 	box-shadow: 0 2px 5px rgb(95, 93, 93);
+}
+
+.js-focus-visible .standard-button.focus-visible {
+	outline: none;
+	border: 3px rgb(39, 38, 38) solid;
 }
 
 #error {

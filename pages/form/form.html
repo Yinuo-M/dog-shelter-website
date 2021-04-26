@@ -18,136 +18,142 @@
 		/>
 	</head>
 	<body>
-		<nav id="main-nav">
-			<header id="nav-header">
-				<img
-					src="../../assets/common/logo.png"
-					alt="Pupportunity's logo, featuring a dog surrounded by a heart shape."
-					id="nav-logo"
-					height="64"
-					width="64"
-				/>
-				<p id="nav-title">Pupportunity</p>
-			</header>
-			<ul id="nav-list">
-				<li class="nav-list-item">
-					<a href="index.html" class="nav-link home">Home</a>
-				</li>
-				<li class="nav-list-item">
-					<a href="list.html" class="nav-link meet-our-dogs">Meet our dogs</a>
-				</li>
-				<li class="nav-list-item">
-					<a href="contact.html" class="nav-link contact">Contact</a>
-				</li>
-			</ul>
-		</nav>
-		<header class="form-header">Adopt a dog</header>
-		<main>
+		<header>
+			<nav id="main-nav">
+				<header id="nav-header">
+					<img
+						src="../../assets/common/logo.png"
+						alt="Pupportunity's logo, featuring a dog surrounded by a heart shape."
+						id="nav-logo"
+						height="64"
+						width="64"
+					/>
+					<p id="nav-title">Pupportunity</p>
+				</header>
+				<ul id="nav-list">
+					<li class="nav-list-item">
+						<a href="index.html" class="nav-link home">Home</a>
+					</li>
+					<li class="nav-list-item">
+						<a href="list.html" class="nav-link meet-our-dogs">Meet our dogs</a>
+					</li>
+					<li class="nav-list-item">
+						<a href="contact.html" class="nav-link contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main id="form-main">
+			<h1 class="form-heading">Adopt a dog</h1>
+			<p class="advice">Required fields are marked by asterisk (*).</p>
 			<form action="#" class="adopt-form">
-				<div class="input-wrapper">
-					<label for="dog">You are adopting:</label
-					><select name="dog" id="dog" required></select>
-				</div>
-				<div class="input-wrapper">
-					<label for="name">Full name*</label>
-					<input type="text" id="name" name="name" autocomplete="name" />
-				</div>
-				<div class="input-wrapper">
-					<label for="age">Age*</label>
-					<input type="number" id="age" name="age" min="18" max="90" required />
-				</div>
-				<div class="input-wrapper">
-					<label for="occupation">Occupation*</label>
-					<input type="text" id="occupation" name="occupation" required />
-				</div>
-				<div class="input-wrapper">
-					<label for="phone">Phone number*</label>
-					<input type="tel" id="phone" name="phone" required />
-				</div>
-				<div class="input-wrapper">
-					<label for="email">Email*</label>
-					<input type="email" id="email" name="email" required />
-				</div>
-				<!--TODO Setting Min, Max and take dog home for date-->
-				<div class="input-wrapper">
-					<label for="start-date">When would you like to take home?*</label>
-					<input type="date" id="start-date" name="start-date" required />
-				</div>
-				<div class="input-wrapper">
-					<label for="reason">Why do you want to adopt ?*</label>
-					<textarea
-						cols="20"
-						rows="5"
-						id="reason"
-						name="reason"
-						required
-						min-length="20"
-					></textarea>
-				</div>
-				<div class="input-wrapper">
-					<label for="experience">Have you had a dog before?*</label>
-					<select name="experience" id="experience" required>
-						<option value="yes">Yes</option>
-						<option value="no">No</option>
-					</select>
-				</div>
-				<div class="input-wrapper">
-					<label for="history"
-						>What experience did you have with taking care of dogs?</label
-					>
-					<textarea cols="20" rows="5" id="history" name="history"></textarea>
-				</div>
-				<div class="input-wrapper">
-					<fieldset class="source">
-						<legend>How did you hear about us?</legend>
-						<input
-							type="radio"
-							name="source"
-							id="search"
-							class="radio"
-							value="search"
-						/><label for="search">Search engine, e.g. Google</label
-						><input
-							type="radio"
-							name="source"
-							id="facebook"
-							class="radio"
-							value="facebook"
-						/><label for="facebook">Facebook</label
-						><input
-							type="radio"
-							name="source"
-							id="twitter"
-							class="radio"
-							value="twitter"
-						/><label for="twitter">Twitter</label
-						><input
-							type="radio"
-							name="source"
-							id="ins"
-							class="radio"
-							value="ins"
-						/><label for="ins">Instagram</label
-						><input
-							type="radio"
-							name="source"
-							id="friend"
-							class="radio"
-							value="friend"
-						/><label for="friend">Friends or family</label
-						><input
-							type="radio"
-							name="source"
-							id="others"
-							class="radio"
-							value="others"
-						/><label for="others">Others</label>
-						<div class="input-wrapper specify">
-							<label for="specify">Please specify:</label>
-							<input type="text" name="specify" id="specify" />
-						</div>
-					</fieldset>
-				</div>
+				<ul class="input-list">
+					<li class="input-wrapper">
+						<label for="dog">You are adopting:</label
+						>
+						<input name="dog" id="dog" readonly></input>
+					</li>
+					<li class="input-wrapper">
+						<label for="name">Full name</label>
+						<input type="text" id="name" name="name" autocomplete="name" required/>
+					</li>
+					<li class="input-wrapper">
+						<label for="age">Age (at least 18)</label>
+						<input type="number" id="age" name="age" min="18" max="100" required />
+					</li>
+					<li class="input-wrapper">
+						<label for="occupation">Occupation</label>
+						<input type="text" id="occupation" name="occupation" required />
+					</li>
+					<li class="input-wrapper">
+						<label for="phone">Phone number</label>
+						<input type="tel" id="phone" name="phone" autocomplete="tel"required />
+					</li>
+					<li class="input-wrapper">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" autocomplete="email" required />
+					</li>
+					<!--TODO Setting Min, Max and take dog home for date-->
+					<li class="input-wrapper">
+						<label for="start-date">When would you like to take placeholder home?</label>
+						<input type="date" id="start-date" name="start-date" required />
+					</li>
+					<li class="input-wrapper">
+						<label for="reason">Why do you want to adopt placeholder? (at least 20 words)</label>
+						<textarea
+							cols="20"
+							rows="5"
+							id="reason"
+							name="reason"
+							required
+							min-length="20"
+						></textarea>
+					</li>
+					<li class="input-wrapper">
+						<label for="experience">Have you had a dog before?</label>
+						<select name="experience" id="experience" required>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+						</select>
+					</li>
+					<li class="input-wrapper">
+						<label for="history"
+							>What experience did you have with taking care of dogs?</label
+						>
+						<textarea cols="20" rows="5" id="history" name="history"></textarea>
+					</li>
+					<li class="input-wrapper">
+						<fieldset class="source">
+							<legend>How did you hear about us?</legend>
+							<input
+								type="radio"
+								name="source"
+								id="search"
+								class="radio"
+								value="search"
+							/><label for="search">Search engine, e.g. Google</label
+							><input
+								type="radio"
+								name="source"
+								id="facebook"
+								class="radio"
+								value="facebook"
+							/><label for="facebook">Facebook</label
+							><input
+								type="radio"
+								name="source"
+								id="twitter"
+								class="radio"
+								value="twitter"
+							/><label for="twitter">Twitter</label
+							><input
+								type="radio"
+								name="source"
+								id="ins"
+								class="radio"
+								value="ins"
+							/><label for="ins">Instagram</label
+							><input
+								type="radio"
+								name="source"
+								id="friend"
+								class="radio"
+								value="friend"
+							/><label for="friend">Friends or family</label
+							><input
+								type="radio"
+								name="source"
+								id="others"
+								class="radio"
+								value="others"
+							/><label for="others">Others</label>
+							<li class="input-wrapper specify">
+								<label for="specify">Please specify:</label>
+								<input type="text" name="specify" id="specify" />
+							</li>
+						</fieldset>
+					</li>
+				</ul>
 			</form>
 		</main>
 		<footer id="home-footer">

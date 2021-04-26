@@ -2,6 +2,8 @@
 
 import "./list.css";
 import dogList from "../../dogs";
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
 
 //ANCHOR loading and back to top buttons
 
@@ -66,6 +68,9 @@ function populatePage(list) {
 
 function loadMore() {
 	populatePage(displayList);
+	const dogs = document.querySelectorAll(".preview-anchor");
+	const firstNewDog = dogs[listStatus.index - listStatus.itemsPerPage];
+	firstNewDog.focus({ preventScroll: true });
 }
 
 function toggleButtons() {
@@ -80,6 +85,8 @@ function toggleButtons() {
 
 function scrollToTop() {
 	window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+	const firstDog = document.querySelector(".preview-anchor");
+	firstDog.focus({ preventScroll: true });
 }
 
 //ANCHOR the filter

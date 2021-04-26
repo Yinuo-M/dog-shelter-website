@@ -1,0 +1,69 @@
+:root {
+	--banner-blue: #b9d9e0;
+	--banner-hover-blue: #91b9c4;
+	--text-blue: #377b8b;
+	--background-white: #f7ede2;
+	--button-pink: #f4acb7;
+	--button-hover-pink: #ce9099;
+	--text-black: #292525;
+	--footer-blue: #161a1d;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+#form-main {
+	padding: 3rem;
+	padding-bottom: 4rem;
+	margin: 4rem auto;
+	max-width: 85%;
+	background: rgb(252, 250, 248);
+	border-radius: 15px;
+	border: 1px solid rgb(236, 232, 232);
+	box-shadow: 0 0 20px rgb(214, 203, 203);
+	position: relative;
+}
+
+.form-heading {
+	text-align: center;
+	font-size: 4rem;
+	font-weight: bold;
+	color: rgb(58, 54, 54);
+	text-shadow: 1px 1px 2px rgb(192, 187, 187);
+	padding-bottom: 2rem;
+}
+
+.advice {
+	font-weight: bold;
+	color: var(--text-blue);
+}
+
+.input-list {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.input-wrapper {
+	margin: 0.5rem 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+input {
+	width: 100%;
+}

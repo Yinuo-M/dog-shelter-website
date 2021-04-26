@@ -1,15 +1,5 @@
 import "./common.css";
 
-//ANCHOR buttons
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) =>
-	button.addEventListener("mousedown", cancelDefault)
-);
-
-function cancelDefault(e) {
-	e.preventDefault();
-}
-
 //ANCHOR setting up the service worker
 
 if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {

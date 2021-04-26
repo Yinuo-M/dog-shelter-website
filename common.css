@@ -50,6 +50,9 @@ footer {
 	min-height: 7rem;
 }
 
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
 
 /* ANCHOR main navigation */
 
@@ -101,7 +104,9 @@ footer {
 	transition: background 0.2s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
 	background: var(--banner-hover-blue);
 }
 
@@ -115,7 +120,9 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	position: relative;
+	text-align: center;
 	z-index: 1;
 	height: calc(100vh - 4.5rem);
 }
@@ -131,22 +138,15 @@ footer {
 	background: rgba(21, 22, 22, 0.1);
 }
 
-#home-header {
+#home-title {
 	color: white;
 	text-align: center;
-	font-size: 3rem;
-	font-weight: 300;
-	padding: 2rem 1rem;
+	font-size: 5rem;
+	font-weight: bold;
+	margin: 4rem auto;
 	text-shadow: 1px 1px 10px rgb(49, 48, 48);
 	z-index: 1;
-	position: relative;
 	animation: fade-in 1s both;
-}
-
-#home-main {
-	margin: 4rem auto;
-	text-align: center;
-	z-index: 1;
 }
 
 .standard-button {
@@ -158,10 +158,18 @@ footer {
 	cursor: pointer;
 	box-shadow: 0 6px 8px -5px rgb(95, 93, 93);
 	transition: background 0.2s;
+	margin-bottom: 4rem;
 }
 
-.standard-button:hover {
+.standard-button:hover,
+.standard-button:active,
+.standard-button:focus {
 	background: var(--button-hover-pink);
+}
+
+.js-focus-visible .standard-button.focus-visible {
+	outline: none;
+	border: 10px white solid;
 }
 
 #home-footer {
@@ -184,7 +192,7 @@ footer {
 @keyframes fade-in {
 	0% {
 		opacity: 0;
-		transform: scale(0.95) ;
+		transform: scale(0.95);
 	}
 
 	100% {

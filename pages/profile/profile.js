@@ -1,7 +1,6 @@
 import "../../common.css";
 import "./profile.css";
 import debounce from "lodash-es/debounce";
-import { update } from "lodash";
 
 //ANCHOR animation
 
@@ -84,9 +83,28 @@ function updateDots() {
 //ANCHOR touch event for carousel
 const carousel = document.querySelector(".image-wrapper");
 const carouselHammer = new Hammer(carousel);
-carouselHammer.addEventListener("swipeleft", () => {
+carouselHammer.on("swipeleft", () => {
 	prevButton.click();
 });
-carouselHammer.addEventListener("swiperight", () => {
+carouselHammer.on("swiperight", () => {
 	nextButton.click();
 });
+
+//ANCHOR focus for carousel
+prevButton.addEventListener("focus", trackFocus);
+nextButton.addEventListener("focus", trackFocus);
+prevButton.addEventListener("blur", trackFocus);
+nextButton.addEventListener("blur", trackFocus);
+function trackFocus(e) {
+	const carouselButtons = document.querySelectorAll(".carousel-button");
+	const dots = document.querySelector(".dots");
+	if (e.type === "focus") {
+		carouselButtons.forEach((button) => button.classList.add("full-opacity"));
+		dots.classList.add("full-opacity");
+	} else {
+		carouselButtons.forEach((button) =>
+			button.classList.remove("full-opacity")
+		);
+		dots.classList.remove("full-opacity");
+	}
+}

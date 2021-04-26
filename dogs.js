@@ -5,7 +5,7 @@ export default [
 		age: 5,
 		breed: "Labrador Retriever",
 		location: "Wiltshire, England",
-		alt: "Andy, a black Labrador, smiles brightly.",
+		alt: "Black Labrador Andy.",
 		doginalities: [
 			"Shy and quiet",
 			"Easy to train",
@@ -21,7 +21,7 @@ export default [
 		age: 3,
 		breed: "Shiba Inu",
 		location: "Cambridgeshire, England",
-		alt: "Aki, a brown Shiba Inu, looks up and smiles.",
+		alt: "Brown Shiba Inu Aki.",
 		doginalities: [
 			"Independent",
 			"Adventurous and fun-loving",
@@ -37,7 +37,7 @@ export default [
 		age: 8,
 		breed: "Samoyed",
 		location: "London, England",
-		alt: "Sophie, a Samoyed, is resting on the floor.",
+		alt: "Samoyed Sophie.",
 		doginalities: [
 			"Super fluffy",
 			"Good-natured",
@@ -53,7 +53,7 @@ export default [
 		age: 5,
 		breed: "Siberian Husky",
 		location: "Flintshire, Wales",
-		alt: "Albert, a Siberian Husky, is patted on the head.",
+		alt: "Siberian Husky Albert.",
 		doginalities: [
 			"Outgoing and friendly",
 			"Howling master",
@@ -69,7 +69,7 @@ export default [
 		age: 10,
 		breed: "Golden Retriever",
 		location: "Edinburgh, Scotland",
-		alt: "Caramel, a Golden Retriever, smiles while looking away.",
+		alt: "Golden Retriver Caramel.",
 		doginalities: [
 			"Quiet but loving",
 			"Slow walker",
@@ -85,7 +85,7 @@ export default [
 		age: 1,
 		breed: "Golden Retriever",
 		location: "Tyrone, Northern Ireland",
-		alt: "Max, a Golden Retriever, runs towards the camera.",
+		alt: "Golden Retriver puppy Max.",
 		doginalities: [
 			"Loves toys and games",
 			"Brave and curious",
@@ -101,7 +101,7 @@ export default [
 		age: 1,
 		breed: "Bichon Frise",
 		location: "Ayrshire, Scotland",
-		alt: "Udon, a Bichon Frise, lies on a meadow.",
+		alt: "Bichon Frise Udon.",
 		doginalities: [
 			"Shy and introverted",
 			"Loves nature",
@@ -117,7 +117,7 @@ export default [
 		age: 2,
 		breed: "Beagle",
 		location: "Yorkshire, England",
-		alt: "Kay, a Beagle, lies on a meadow.",
+		alt: "Beagle Kay.",
 		doginalities: [
 			"Howling master",
 			"Playful",
@@ -133,7 +133,7 @@ export default [
 		age: 11,
 		breed: "Chow Chow",
 		location: "Pembrokeshire, Wales",
-		alt: "Laurel, a Chow Chow, stands on a meadow handsomely.",
+		alt: "Chow Chow Laurel.",
 		doginalities: [
 			"Loyal",
 			"Good guard dog",
@@ -149,7 +149,7 @@ export default [
 		age: 1,
 		breed: "German Shepherd",
 		location: "Fermanagh, Northern Ireland",
-		alt: "Anna, a German Shepherd puppy with beaming eyes.",
+		alt: "German Shepherd puppy Anna.",
 		doginalities: [
 			"Good with children",
 			"Alert and watchful",
@@ -165,7 +165,7 @@ export default [
 		age: 12,
 		breed: "Labrador Retriever",
 		location: "Essex, England",
-		alt: "Victor, a brown Labrador, looks at the camera gently.",
+		alt: "Brown Labrador Victor.",
 		doginalities: [
 			"Easy to train",
 			"Energetic and active",
@@ -181,7 +181,7 @@ export default [
 		age: 3,
 		breed: "Pug",
 		location: "Aberdeenshire, Scotland",
-		alt: "Doug, a Pug on a leash, smiles brightly.",
+		alt: "Doug the Pug.",
 		doginalities: [
 			"Affectionate and loving",
 			"Playful and active",
@@ -197,7 +197,7 @@ export default [
 		age: 2,
 		breed: "Pembroke Welsh Corgi",
 		location: "Manchester, England",
-		alt: "Brandon, a Pembroke Welsh Corgi, stands on a meadow.",
+		alt: "Pembroke Welsh Corgi Brandon.",
 		doginalities: [
 			"Happy and cheerful",
 			"Good with children",
@@ -213,7 +213,7 @@ export default [
 		age: 4,
 		breed: "Toy Poodle",
 		location: "Clwyd, Wales",
-		alt: "Mia, a Toy Poodle, runs towards the camera happily.",
+		alt: "Toy Poodle Mia.",
 		doginalities: [
 			"Super fluffy",
 			"Athletic and agile",
@@ -229,7 +229,7 @@ export default [
 		age: 6,
 		breed: "Alaskan Malamute",
 		location: "Oxfordshire, England",
-		alt: "Iona, a An Alaskan Malamute, smiles happily.",
+		alt: "Alaskan Malamute Iona.",
 		doginalities: [
 			"Cheerful and outgoing",
 			"Strong willed and independent",
