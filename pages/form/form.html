@@ -20,7 +20,6 @@
 		defer
 		src="/node_modules/focus-visible/dist/focus-visible.min.js"
 	></script>
-		<script defer src="form.js"></script>
 	</head>
 	<body>
 		<header>
@@ -42,16 +41,13 @@
 					<li class="nav-list-item">
 						<a href="list.html" class="nav-link meet-our-dogs">Meet our dogs</a>
 					</li>
-					<li class="nav-list-item">
-						<a href="contact.html" class="nav-link contact">Contact</a>
-					</li>
 				</ul>
 			</nav>
 		</header>
 		<main id="form-main">
 			<h1 class="form-heading">Adopt a dog</h1>
 			<p class="advice">Required fields are marked by asterisk (<span class="required">*</span>).</p>
-			<form action="#" class="adopt-form">
+			<form action="#" class="adopt-form" novalidate>
 				<ul class="input-list">
 					<li class="input-wrapper">
 						<label for="dog">You are adopting:</label
@@ -91,19 +87,19 @@
 							id="reason"
 							name="reason"
 							required
-							min-length="20"
+							minlength="20"
 						></textarea>
 					</li>
 					<li class="input-wrapper">
 						<label for="experience">Have you had a dog before?<span class="required">*</span></label>
 						<select name="experience" id="experience" required>
 							<option value="yes">Yes</option>
-							<option value="no">No</option>
+							<option value="no" selected>No</option>
 						</select>
 					</li>
-					<li class="input-wrapper">
+					<li class="input-wrapper hidden">
 						<label for="history"
-							>What experience did you have with taking care of dogs?</label
+							>What experience do you have with taking care of dogs?</label
 						>
 						<textarea cols="20" rows="5" id="history" name="history"></textarea>
 					</li>
@@ -171,8 +167,8 @@
 								</div>
 						</fieldset>
 					</li>
-					<button type="submit" class="submit-button standard-button">Submit</button>
 				</ul>
+			<button type="submit" class="submit-button standard-button">Submit</button>
 			</form>
 		</main>
 		<footer id="home-footer">

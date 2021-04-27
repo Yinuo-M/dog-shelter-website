@@ -118,7 +118,8 @@ input:focus {
 	justify-content: space-between;
 }
 
-.js-focus-visible .preview-anchor:focus-visible {
+.js-
+-visible .preview-anchor:focus-visible {
  outline: 5px rgb(77, 75, 75) solid;
 }
 
@@ -174,7 +175,7 @@ input:focus {
 }
 
 .load-more-button {
-	display: block;
+	display: none;
 	margin: 0 auto 4rem auto;
 	box-shadow: 0 6px 8px -5px rgb(95, 93, 93);
 }
