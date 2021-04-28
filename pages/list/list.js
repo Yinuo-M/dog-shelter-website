@@ -172,3 +172,61 @@ function autoSave() {
 	sessionStorage.setItem("minAge", minAgeInput.value);
 	sessionStorage.setItem("maxAge", maxAgeInput.value);
 }
+
+//ANCHOR filter bar
+const filterButton = document.querySelector(".filter-toggle");
+const filterWrapper = document.querySelector(".filter-wrapper");
+filterButton.addEventListener("click", toggleFilter);
+
+function toggleFilter() {
+	if (filterWrapper.classList.contains("filter-open")) {
+		closeFilter();
+	} else {
+		openFilter();
+	}
+}
+
+function openFilter() {
+	filterWrapper.classList.add("filter-open");
+	filterButton.classList.add("filter-open");
+	filterWrapper.setAttribute("aria-hidden", "false");
+	filterWrapper
+		.querySelectorAll("input, button, select")
+		.forEach((a) => (a.tabIndex = 0));
+}
+
+function closeFilter() {
+	filterWrapper.classList.remove("filter-open");
+	filterButton.classList.remove("filter-open");
+	filterWrapper.setAttribute("aria-hidden", "true");
+	filterWrapper
+		.querySelectorAll("input, button, select")
+		.forEach((a) => (a.tabIndex = -1));
+}
+
+window.addEventListener("resize", restoreFilter);
+function restoreFilter() {
+	restorePCFilter();
+	restorePhoneFilter();
+}
+
+function restorePCFilter() {
+	if (document.documentElement.clientWidth > 660) {
+		filterWrapper.classList.remove("filter-open");
+		filterWrapper.setAttribute("aria-hidden", "false");
+		filterWrapper
+			.querySelectorAll("input, button, select")
+			.forEach((a) => (a.tabIndex = 0));
+	}
+}
+
+function restorePhoneFilter() {
+	if (document.documentElement.clientWidth <= 660) {
+		filterWrapper.setAttribute("aria-hidden", "true");
+		filterWrapper
+			.querySelectorAll("input, button, select")
+			.forEach((a) => (a.tabIndex = -1));
+	}
+}
+
+window.addEventListener("DOMContentLoaded", restorePhoneFilter);

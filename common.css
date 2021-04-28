@@ -132,6 +132,23 @@ footer {
 	margin: 0 0.5rem;
 }
 
+.freeze {
+	overflow: hidden;
+}
+
+.freeze #intro::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background:rgba(0, 0, 0, 0.479);
+	z-index: 2;
+}
+
+
+
 /* ANCHOR main page intro */
 
 #intro {

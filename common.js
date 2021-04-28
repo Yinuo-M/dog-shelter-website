@@ -37,12 +37,36 @@ function openMenu() {
 	navList.classList.add("menu-open");
 	navList.setAttribute("aria-hidden", "false");
 	navList.querySelectorAll("a").forEach((a) => (a.tabIndex = 0));
+	freezeScreen();
 }
 
 function closeMenu() {
 	navList.classList.remove("menu-open");
 	navList.setAttribute("aria-hidden", "true");
 	navList.querySelectorAll("a").forEach((a) => (a.tabIndex = -1));
+	defrostScreen();
+}
+
+function freezeScreen() {
+	const body = document.querySelector("body");
+	const main = document.querySelector("main");
+	const footer = document.querySelector("footer");
+	body.classList.add("freeze");
+	trapFocus();
+}
+
+function defrostScreen() {
+	const body = document.querySelector("body");
+	const main = document.querySelector("main");
+	const footer = document.querySelector("footer");
+	body.classList.remove("freeze");
+}
+
+//TODO trap focus.
+
+function trapFocus() {
+	const lastNavLink = document.querySelector(".nav-list-item:last-child a");
+	lastNavLink.addEventListener("keydown");
 }
 
 window.addEventListener("resize", restoreMenu);
