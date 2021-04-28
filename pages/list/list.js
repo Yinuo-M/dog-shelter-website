@@ -34,7 +34,7 @@ function populatePage(list) {
 		<img
 			width="200"
 			height="200"
-			src="../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg"
+			src="assets/dogs/dog${dog.index}/${dog.name}-profile.jpg"
 			alt="${dog.alt}";
 		/>
 		<ul class="info-list">
