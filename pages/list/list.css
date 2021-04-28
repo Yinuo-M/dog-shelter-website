@@ -146,6 +146,10 @@ input:focus {
 	border-radius: 3px;
 }
 
+.info-wrapper {
+	padding-top: 1rem;
+}
+
 .other-info {
 	font-size: 1.3rem;
 	display: inline-block;
@@ -220,4 +224,8 @@ input:focus {
 		opacity: 1;
 		transform: scale(1) translate(0, 0);
 	}
+}
+
+@media (max-width: 760) {
+	
 }
