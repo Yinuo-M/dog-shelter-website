@@ -110,6 +110,26 @@ footer {
 	background: var(--banner-hover-blue);
 }
 
+.nav-link:focus {
+	font-size: 1.7rem;
+	transition: font-size 0.2s;
+}
+
+.hamburger {
+	display: none;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+	height: 100%;
+	cursor: pointer;
+}
+
+.hamburger-icon {
+	height: 35px;
+	width: 35px;
+	margin: 0 1rem;
+}
+
 /* ANCHOR main page intro */
 
 #intro {
@@ -198,5 +218,77 @@ footer {
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media (max-width: 580px) {
+	#home-title {
+		font-size: 4rem;
+	}
+
+	#main-nav {
+		justify-content: center;
+	}
+
+	#nav-header {
+		width: 100%;
+		background: var(--banner-blue);
+		overflow: hidden;
+		z-index: 1;
+		height: 4.5rem;
+	}
+
+	#nav-list {
+		position: absolute;
+		width: 100%;
+		top: 4.5rem;
+		background: var(--background-white);
+		transform: translateY(-100%);
+		transform-origin: top;
+		height: auto;
+		overflow: hidden;
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+		z-index: 0;
+	}
+
+	.nav-list-item {
+		display: block;
+		margin: auto;
+		height: 100%;
+	}
+
+	.nav-link {
+		justify-content: center;
+		height: 100%;
+		padding: 0.5rem 0;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.hamburger:hover,
+	.hamburger:active,
+	.hamburger:focus {
+		background: var(--banner-hover-blue);
+	}
+
+	.nav-link.home {
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	#nav-list.menu-open {
+		transform: translateY(0);
+	}
+
+	#nav-list.transition {
+		transition: transform 1s;
+	}
+}
+
+@media (max-width: 440px) {
+	#home-title {
+		font-size: 3rem;
 	}
 }
