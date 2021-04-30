@@ -38,43 +38,17 @@ function openMenu() {
 	navList.classList.add("menu-open");
 	navList.setAttribute("aria-hidden", "false");
 	navList.querySelectorAll("a").forEach((a) => (a.tabIndex = 0));
-	freezeScreen();
+	menuButton.setAttribute("aria-expanded", "true");
 }
 
 function closeMenu() {
 	navList.classList.remove("menu-open");
 	navList.setAttribute("aria-hidden", "true");
 	navList.querySelectorAll("a").forEach((a) => (a.tabIndex = -1));
-	defrostScreen();
-}
-
-function freezeScreen() {
-	const body = document.querySelector("body");
-	const main = document.querySelector("main");
-	const footer = document.querySelector("footer");
-	body.classList.add("freeze");
-	trapFocus();
-}
-
-function defrostScreen() {
-	const body = document.querySelector("body");
-	const main = document.querySelector("main");
-	const footer = document.querySelector("footer");
-	body.classList.remove("freeze");
+	menuButton.setAttribute("aria-expanded", "false");
 }
 
 //TODO trap focus.
-
-function trapFocus() {
-	const lastNavLink = document.querySelector(".nav-list-item:last-child a");
-	lastNavLink.addEventListener("keydown");
-}
-
-window.addEventListener("resize", restoreMenu);
-function restoreMenu() {
-	restorePCMenu();
-	restorePhoneMenu();
-}
 
 function restorePCMenu() {
 	if (document.documentElement.clientWidth > 580) {
@@ -82,6 +56,7 @@ function restorePCMenu() {
 		navList.setAttribute("aria-hidden", "false");
 		navList.querySelectorAll("a").forEach((a) => (a.tabIndex = 0));
 		navList.classList.remove("transition");
+		menuButton.removeAttribute("aria-expanded")
 	}
 }
 
@@ -89,7 +64,8 @@ function restorePhoneMenu() {
 	if (document.documentElement.clientWidth <= 580) {
 		navList.setAttribute("aria-hidden", "true");
 		navList.querySelectorAll("a").forEach((a) => (a.tabIndex = -1));
+		menuButton.setAttribute("aria-expanded", "false");
 	}
 }
 
-window.addEventListener("DOMContentLoaded", restorePhoneMenu);
+window.addEventListener("DOMContentLoaded", restorePhoneMenu)

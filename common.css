@@ -75,6 +75,12 @@ footer {
 	padding: 2rem 1rem;
 }
 
+.home-anchor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #nav-logo {
 	margin-right: 2px;
 	height: 50px;
@@ -282,7 +288,7 @@ footer {
 
 	.hamburger:hover,
 	.hamburger:active,
-	.hamburger:focus {
+	.js-focus-visible .hamburger:focus-visible {
 		background: var(--banner-hover-blue);
 	}
 

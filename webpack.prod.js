@@ -16,7 +16,6 @@ module.exports = merge(common, {
 		assetModuleFilename: "assets/[name].[contenthash][ext]",
 		clean: true,
 	},
-	devtool: "eval-source-map",
 	optimization: {
 		moduleIds: "deterministic",
 		minimizer: [new CssMinimizerWebpackPlugin(), new TerserPlugin()],

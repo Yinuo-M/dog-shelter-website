@@ -17,7 +17,8 @@
 	padding: 3rem;
 	padding-bottom: 4rem;
 	margin: 4rem auto;
-	max-width: 85%;
+	max-width: 65rem;
+	width: 90%;
 	background: rgb(255, 255, 255);
 	border-radius: 15px;
 	border: 1px solid rgb(236, 232, 232);
@@ -211,6 +212,7 @@
 	align-items: center;
 	font-size: 1.8rem;
 	padding-top: 1.5rem;
+	flex-wrap: wrap;
 }
 
 .doginalities-wrapper {
@@ -257,5 +259,41 @@
 	100% {
 		opacity: 1;
 		transform: scale(1) translate(0, 0);
+	}
+}
+
+@media (max-width: 600px) {
+	#profile-main {
+		padding: 3rem 1rem 4rem 1rem;
+		width: 95%;
+	}
+
+	.back {
+		left: 0;
+	}
+
+	.profile-header {
+		font-size: 3.5rem;
+	}
+}
+
+@media (max-width: 400px) {
+	#profile-main {
+		padding: 2rem 0rem 4rem 0rem;
+		width: 95%;
+		margin: 2rem auto;
+	}
+
+	.profile-header {
+		font-size: 3rem;
+	}
+
+	.about h1,
+	.doginalities h1 {
+		font-size: 2rem;
+	}
+
+	.adopt {
+		font-size: 1.5rem;
 	}
 }

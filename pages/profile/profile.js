@@ -15,6 +15,7 @@ function slideUp() {
 		const threshold = document.documentElement.clientHeight;
 		const top = elem.getBoundingClientRect().top;
 		if (top < threshold) {
+			elem.classList.remove("hide");
 			elem.classList.add("show");
 		}
 	});
@@ -84,10 +85,10 @@ function updateDots() {
 //ANCHOR touch event for carousel
 const carousel = document.querySelector(".image-wrapper");
 const carouselHammer = new Hammer(carousel);
-carouselHammer.on("swipeleft", () => {
+carouselHammer.on("swiperight", () => {
 	prevButton.click();
 });
-carouselHammer.on("swiperight", () => {
+carouselHammer.on("swipeleft", () => {
 	nextButton.click();
 });
 

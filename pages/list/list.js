@@ -5,12 +5,7 @@ import dogList from "../../dogs";
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
 import "focus-visible";
-// const imageUrls = {};
-// for (let dog of dogList) {
-// 	import(
-// 		/* webpackMode: "eager" */ `../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg`
-// 	).then((url) => (imageUrls[dog.index] = url));
-// }
+
 //ANCHOR loading and back to top buttons
 
 const loadButton = document.querySelector(".load-more-button");
@@ -184,7 +179,7 @@ function autoSave() {
 	sessionStorage.setItem("maxAge", maxAgeInput.value);
 }
 
-//ANCHOR filter bar
+//ANCHOR filter toggle
 const filterButton = document.querySelector(".filter-toggle");
 const filterWrapper = document.querySelector(".filter-wrapper");
 filterButton.addEventListener("click", toggleFilter);
@@ -200,6 +195,7 @@ function toggleFilter() {
 function openFilter() {
 	filterWrapper.classList.add("filter-open");
 	filterButton.classList.add("filter-open");
+	filterButton.setAttribute("aria-expanded", "true");
 	filterWrapper.setAttribute("aria-hidden", "false");
 	filterWrapper
 		.querySelectorAll("input, button, select")
@@ -209,6 +205,7 @@ function openFilter() {
 function closeFilter() {
 	filterWrapper.classList.remove("filter-open");
 	filterButton.classList.remove("filter-open");
+	filterButton.setAttribute("aria-expanded", "false");
 	filterWrapper.setAttribute("aria-hidden", "true");
 	filterWrapper
 		.querySelectorAll("input, button, select")
@@ -228,6 +225,8 @@ function restorePCFilter() {
 		filterWrapper
 			.querySelectorAll("input, button, select")
 			.forEach((a) => (a.tabIndex = 0));
+
+		filterButton.removeAttribute("aria-expanded");
 	}
 }
 
@@ -238,6 +237,8 @@ function restorePhoneFilter() {
 			.querySelectorAll("input, button, select")
 			.forEach((a) => (a.tabIndex = -1));
 	}
+
+	filterButton.setAttribute("aria-expanded", "false");
 }
 
 window.addEventListener("DOMContentLoaded", restorePhoneFilter);
