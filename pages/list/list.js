@@ -4,7 +4,13 @@ import "./list.css";
 import dogList from "../../dogs";
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
-
+import "focus-visible";
+// const imageUrls = {};
+// for (let dog of dogList) {
+// 	import(
+// 		/* webpackMode: "eager" */ `../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg`
+// 	).then((url) => (imageUrls[dog.index] = url));
+// }
 //ANCHOR loading and back to top buttons
 
 const loadButton = document.querySelector(".load-more-button");
@@ -21,21 +27,34 @@ let listStatus = {
 
 populatePage(displayList);
 
-function populatePage(list) {
+async function populatePage(list) {
 	const startIndex = listStatus.index;
 	const endIndex = listStatus.index + listStatus.itemsPerPage;
 	const listToInsert = list.slice(startIndex, endIndex);
+	await insertDog(listToInsert);
 
-	listToInsert.forEach((dog) => {
+	listStatus.done = list.length === endIndex ? true : false;
+	listStatus.index += listStatus.itemsPerPage;
+
+	toggleButtons();
+	const sorryMessage = document.getElementById("error");
+	sorryMessage.style.display = "none";
+}
+
+async function insertDog(listToInsert) {
+	await listToInsert.forEach(async (dog) => {
+		const url = await import(
+			/* webpackMode: "eager" */ `../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg`
+		);
 		const previewList = document.getElementById("dogs");
 		const html = `
 		<li class="dog-preview">
 		<a class="preview-anchor" href="${dog.name}-profile.html">
-		<img
+		<img class="${dog.name}"
 			width="200"
 			height="200"
-			src="assets/dogs/dog${dog.index}/${dog.name}-profile.jpg"
-			alt="${dog.alt}";
+			src=""
+			alt="${dog.alt}"
 		/>
 		<ul class="info-list">
 			<li class="location">${dog.location}</li>
@@ -54,20 +73,12 @@ function populatePage(list) {
 		`;
 
 		previewList.insertAdjacentHTML("beforeend", html);
+		const img = document.querySelector(`img.${dog.name}`);
+		img.src = url.default;
 	});
-
-	const numOnScreen = document.querySelectorAll(".dog-preview").length;
-
-	listStatus.done = list.length === numOnScreen ? true : false;
-	listStatus.index += listStatus.itemsPerPage;
-
-	toggleButtons();
-	const sorryMessage = document.getElementById("error");
-	sorryMessage.style.display = "none";
 }
-
-function loadMore() {
-	populatePage(displayList);
+async function loadMore() {
+	await populatePage(displayList);
 	const dogs = document.querySelectorAll(".preview-anchor");
 	const firstNewDog = dogs[listStatus.index - listStatus.itemsPerPage];
 	firstNewDog.focus({ preventScroll: true });

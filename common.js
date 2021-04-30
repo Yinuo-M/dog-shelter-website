@@ -1,4 +1,5 @@
 import "./common.css";
+import "focus-visible";
 
 //ANCHOR setting up the service worker
 

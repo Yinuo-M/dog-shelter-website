@@ -1,4 +1,5 @@
 import "./form.css";
+import "focus-visible";
 
 //ANCHOR form validation
 const form = document.querySelector(".adopt-form");

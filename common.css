@@ -143,11 +143,9 @@ footer {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background:rgba(0, 0, 0, 0.479);
+	background: rgba(0, 0, 0, 0.479);
 	z-index: 2;
 }
-
-
 
 /* ANCHOR main page intro */
 
@@ -201,8 +199,7 @@ footer {
 }
 
 .standard-button:hover,
-.standard-button:active,
-.standard-button:focus {
+.standard-button:active {
 	background: var(--button-hover-pink);
 }
 
@@ -252,7 +249,6 @@ footer {
 		overflow: hidden;
 		z-index: 1;
 		height: 4.5rem;
-		
 	}
 
 	#nav-list {

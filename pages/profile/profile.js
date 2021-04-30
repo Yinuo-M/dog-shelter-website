@@ -1,6 +1,7 @@
 import "../../common.css";
 import "./profile.css";
 import debounce from "lodash-es/debounce";
+import "focus-visible";
 
 //ANCHOR animation
 
