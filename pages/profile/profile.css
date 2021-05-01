@@ -54,7 +54,7 @@
 	font-weight: bold;
 	color: rgb(58, 54, 54);
 	text-shadow: 1px 1px 2px rgb(192, 187, 187);
-	padding: 1rem 0 2rem 0;
+	padding: 1rem 0.5rem 2rem 0.5rem;
 }
 
 .name {
@@ -274,6 +274,12 @@
 	}
 }
 
+@media (max-width: 500px) {
+	.profile-header {
+		font-size: 3rem;
+	}
+}
+
 @media (max-width: 400px) {
 	#profile-main {
 		padding: 2rem 0rem 4rem 0rem;
@@ -282,7 +288,7 @@
 	}
 
 	.profile-header {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 
 	.about h1,
@@ -292,5 +298,9 @@
 
 	.adopt {
 		font-size: 1.5rem;
+	}
+
+	.back {
+		display: none;
 	}
 }

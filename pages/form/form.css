@@ -217,10 +217,23 @@ input[type="radio"]:checked {
 	}
 }
 
+@media (max-width: 500px) {
+	.form-heading {
+		font-size: 2.5rem;
+	}
+}
+
 @media (max-width: 400px) {
 	#form-main {
 		padding: 2rem 1.5rem;
-		padding-right: calc(1.5rem + 24px);
 		margin: 2rem auto;
+	}
+
+	.adopt-form {
+		padding-right: 24px;
+	}
+
+	.form-heading {
+		font-size: 2rem;
 	}
 }
