@@ -266,7 +266,6 @@ footer {
 		transform-origin: top;
 		height: auto;
 		overflow: hidden;
-		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
 		z-index: 0;
 	}
 
@@ -299,10 +298,11 @@ footer {
 
 	#nav-list.menu-open {
 		transform: translateY(0);
+		box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.3);
 	}
 
 	#nav-list.transition {
-		transition: transform 1s;
+		transition: transform 1s, box-shadow 1s;
 	}
 }
 

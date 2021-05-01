@@ -38,7 +38,8 @@ textarea:focus {
 #form-main {
 	padding: 3rem 7rem;
 	margin: 4rem auto;
-	width: 50rem;
+	max-width: 50rem;
+	width: 90%;
 	background: rgb(255, 255, 255);
 	border-radius: 15px;
 	border: 1px solid rgb(236, 232, 232);
@@ -197,5 +198,29 @@ input[type="radio"]:checked {
 	100% {
 		opacity: 1;
 		transform: scale(1) translate(0, 0);
+	}
+}
+
+@media (max-width: 750px) {
+	#form-main {
+		padding: 3rem 4rem;
+	}
+}
+
+@media (max-width: 600px) {
+	#form-main {
+		padding: 2rem 3rem;
+	}
+
+	.form-heading {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 400px) {
+	#form-main {
+		padding: 2rem 1.5rem;
+		padding-right: calc(1.5rem + 24px);
+		margin: 2rem auto;
 	}
 }
