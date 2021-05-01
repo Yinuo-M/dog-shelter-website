@@ -212,7 +212,7 @@ input:focus {
 	font-weight: bold;
 	text-align: center;
 	color: var(--text-blue);
-	margin: auto;
+	margin: 0 auto 5rem auto;
 	display: none;
 	animation: fade-in 0.3s;
 }
@@ -331,5 +331,10 @@ input:focus {
 	.filter-wrapper.filter-open {
 		max-height: 500px;
 		padding: 0;
+	}
+
+	#error {
+		margin: 0 auto 5rem auto;
+		font-size: 2rem;
 	}
 }

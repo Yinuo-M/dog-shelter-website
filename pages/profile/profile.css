@@ -145,11 +145,8 @@
 	margin: auto;
 	z-index: 2;
 	text-align: center;
-	opacity: 0;
-	transition: opacity 0.2s;
 }
 
-.image-wrapper:hover > .dots,
 .carousel-button:hover {
 	opacity: 1;
 }

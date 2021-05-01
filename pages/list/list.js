@@ -28,16 +28,18 @@ async function populatePage(list) {
 	const listToInsert = list.slice(startIndex, endIndex);
 	await insertDog(listToInsert);
 
-	listStatus.done = list.length === endIndex ? true : false;
+	//TODO why is numOnScreen not updated according to await?
+	const numOnScreen = document.querySelectorAll(".preview-anchor").length;
+	listStatus.done = list.length === numOnScreen ? true : false;
+	console.log(listStatus.done);
 	listStatus.index += listStatus.itemsPerPage;
-
 	toggleButtons();
 	const sorryMessage = document.getElementById("error");
 	sorryMessage.style.display = "none";
 }
 
 async function insertDog(listToInsert) {
-	await listToInsert.forEach(async (dog) => {
+	async function insertToDom(dog) {
 		const url = await import(
 			/* webpackMode: "eager" */ `../../assets/dogs/dog${dog.index}/${dog.name}-profile.jpg`
 		);
@@ -70,8 +72,13 @@ async function insertDog(listToInsert) {
 		previewList.insertAdjacentHTML("beforeend", html);
 		const img = document.querySelector(`img.${dog.name}`);
 		img.src = url.default;
-	});
+	}
+
+	for (let dog of listToInsert) {
+		await insertToDom(dog);
+	}
 }
+
 async function loadMore() {
 	await populatePage(displayList);
 	const dogs = document.querySelectorAll(".preview-anchor");
@@ -105,6 +112,7 @@ const applyButton = document.querySelector(".apply");
 applyButton.addEventListener("click", sortDogs);
 applyButton.addEventListener("click", jumpToTop);
 applyButton.addEventListener("click", autoSave);
+applyButton.addEventListener("click", closeFilter);
 
 function sortDogs() {
 	const sortBy = sortByInput.value;
@@ -114,7 +122,8 @@ function sortDogs() {
 
 	displayList = dogList.filter((dog) => {
 		const regionMatch =
-			region === "any" || dog.location.toLowerCase().includes(region);
+			region === "any" ||
+			dog.location.toLowerCase().includes(region.replace("-", " "));
 		if (!regionMatch) return;
 
 		if (dog.age >= minAge && dog.age <= maxAge) return true;
@@ -155,7 +164,11 @@ function noMatchFound() {
 }
 
 function jumpToTop() {
-	window.scrollTo(0, 0);
+	const dogs = document.querySelector("#dogs");
+	const filter = document.querySelector("#filter-bar");
+	const scrollHeight =
+		dogs.getBoundingClientRect().top + window.pageYOffset - filter.offsetHeight;
+	window.scrollTo(0, scrollHeight);
 }
 
 //ANCHOR filter autosave
@@ -203,13 +216,15 @@ function openFilter() {
 }
 
 function closeFilter() {
-	filterWrapper.classList.remove("filter-open");
-	filterButton.classList.remove("filter-open");
-	filterButton.setAttribute("aria-expanded", "false");
-	filterWrapper.setAttribute("aria-hidden", "true");
-	filterWrapper
-		.querySelectorAll("input, button, select")
-		.forEach((a) => (a.tabIndex = -1));
+	if (filterWrapper.classList.contains("filter-open")) {
+		filterWrapper.classList.remove("filter-open");
+		filterButton.classList.remove("filter-open");
+		filterButton.setAttribute("aria-expanded", "false");
+		filterWrapper.setAttribute("aria-hidden", "true");
+		filterWrapper
+			.querySelectorAll("input, button, select")
+			.forEach((a) => (a.tabIndex = -1));
+	}
 }
 
 window.addEventListener("resize", restoreFilter);

@@ -99,14 +99,14 @@ prevButton.addEventListener("blur", trackFocus);
 nextButton.addEventListener("blur", trackFocus);
 function trackFocus(e) {
 	const carouselButtons = document.querySelectorAll(".carousel-button");
-	const dots = document.querySelector(".dots");
-	if (e.type === "focus") {
+	if (
+		e.target ===
+		document.querySelector(".js-focus-visible .carousel-button.focus-visible")
+	) {
 		carouselButtons.forEach((button) => button.classList.add("full-opacity"));
-		dots.classList.add("full-opacity");
 	} else {
 		carouselButtons.forEach((button) =>
 			button.classList.remove("full-opacity")
 		);
-		dots.classList.remove("full-opacity");
 	}
 }
