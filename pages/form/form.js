@@ -1,5 +1,6 @@
 import "./form.css";
 import "focus-visible";
+import dogList from "../../dogs";
 
 //ANCHOR form validation
 const form = document.querySelector(".adopt-form");
@@ -59,3 +60,17 @@ function handleSubmit(e) {
 		firstInvalid.focus();
 	}
 }
+
+//ANCHOR check before user leaves
+window.onbeforeunload = function () {
+	return false;
+};
+
+//ANCHOR Generating dog list
+const dogDropDown = document.querySelector("#dog");
+dogList.forEach((dog) => {
+	const option = document.createElement("option");
+	option.textContent = `${dog.name} (${dog.age}-year-old ${dog.breed})`;
+	option.value = dog.name;
+	dogDropDown.append(option);
+});

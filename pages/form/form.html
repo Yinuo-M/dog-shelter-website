@@ -42,41 +42,88 @@
 		</header>
 		<main id="form-main">
 			<h1 class="form-heading">Adopt a dog</h1>
-			<p class="advice">Required fields are marked by asterisk (<span class="required">*</span>).</p>
+			<p class="advice">
+				Required fields are marked by asterisk (<span class="required">*</span
+				>).
+			</p>
 			<form action="#" class="adopt-form" novalidate>
 				<ul class="input-list">
 					<li class="input-wrapper">
-						<label for="dog">You are adopting:</label
+						<label for="dog"
+							>You are adopting:<span class="required">*</span></label
 						>
-						<input name="dog" id="dog" readonly></input>
+						<select name="dog" id="dog" required>
+							<option selected disabled value="">Please select a dog</option>
+						</select>
 					</li>
 					<li class="input-wrapper">
 						<label for="name">Full name<span class="required">*</span></label>
-						<input type="text" id="name" name="name" autocomplete="name" required/>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							autocomplete="name"
+							required
+						/>
 					</li>
 					<li class="input-wrapper">
-						<label for="age">Age<span class="required">*</span><span class="requirement">at least 18</span></label>
-						<input type="number" id="age" name="age" min="18" max="100" required />
+						<label for="age"
+							>Age<span class="required">*</span
+							><span class="requirement">at least 18</span></label
+						>
+						<input
+							type="number"
+							id="age"
+							name="age"
+							min="18"
+							max="100"
+							required
+						/>
 					</li>
 					<li class="input-wrapper">
-						<label for="occupation">Occupation<span class="required">*</span></label>
+						<label for="occupation"
+							>Occupation<span class="required">*</span></label
+						>
 						<input type="text" id="occupation" name="occupation" required />
 					</li>
 					<li class="input-wrapper">
-						<label for="phone">Phone number<span class="required">*</span></label>
-						<input type="tel" id="phone" name="phone" autocomplete="tel"required />
+						<label for="phone"
+							>Phone number<span class="required">*</span></label
+						>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							autocomplete="tel"
+							required
+						/>
 					</li>
 					<li class="input-wrapper">
 						<label for="email">Email<span class="required">*</span></label>
-						<input type="email" id="email" name="email" autocomplete="email" required />
+						<input
+							type="email"
+							id="email"
+							name="email"
+							autocomplete="email"
+							required
+						/>
 					</li>
 					<!--TODO Setting Min, Max and take dog home for date-->
 					<li class="input-wrapper">
-						<label for="start-date">When would you like to take placeholder home?<span class="required">*</span></label>
+						<label for="start-date"
+							>When would you like to take this dog home?<span
+								class="required"
+								>*</span
+							></label
+						>
 						<input type="date" id="start-date" name="start-date" required />
 					</li>
 					<li class="input-wrapper">
-						<label for="reason">Why do you want to adopt placeholder?<span class="required">*</span><span class="requirement">at least 20 words</span></label>
+						<label for="reason"
+							>Why do you want to adopt this dog?<span class="required"
+								>*</span
+							><span class="requirement">at least 20 words</span></label
+						>
 						<textarea
 							cols="20"
 							rows="5"
@@ -87,7 +134,9 @@
 						></textarea>
 					</li>
 					<li class="input-wrapper">
-						<label for="experience">Have you had a dog before?<span class="required">*</span></label>
+						<label for="experience"
+							>Have you had a dog before?<span class="required">*</span></label
+						>
 						<select name="experience" id="experience" required>
 							<option value="yes">Yes</option>
 							<option value="no" selected>No</option>
@@ -102,69 +151,66 @@
 					<li class="input-wrapper">
 						<fieldset class="source">
 							<legend class="source-legend">How did you hear about us?</legend>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="search"
-										class="radio"
-										value="search"
-									/><label for="search">Search engine, e.g. Google</label
-									>
-								</div>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="facebook"
-										class="radio"
-										value="facebook"
-									/><label for="facebook">Facebook</label
-									>
-								</div>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="twitter"
-										class="radio"
-										value="twitter"
-									/><label for="twitter">Twitter</label
-									>
-								</div>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="ins"
-										class="radio"
-										value="ins"
-									/><label for="ins">Instagram</label
-									>
-								</div>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="friend"
-										class="radio"
-										value="friend"
-									/><label for="friend">Friends or family</label
-									>
-								</div>
-								<div class="radio-wrapper">
-									<input
-										type="radio"
-										name="source"
-										id="others"
-										class="radio"
-										value="others"
-									/><label for="others">Others</label>
-								</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="search"
+									class="radio"
+									value="search"
+								/><label for="search">Search engine, e.g. Google</label>
+							</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="facebook"
+									class="radio"
+									value="facebook"
+								/><label for="facebook">Facebook</label>
+							</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="twitter"
+									class="radio"
+									value="twitter"
+								/><label for="twitter">Twitter</label>
+							</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="ins"
+									class="radio"
+									value="ins"
+								/><label for="ins">Instagram</label>
+							</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="friend"
+									class="radio"
+									value="friend"
+								/><label for="friend">Friends or family</label>
+							</div>
+							<div class="radio-wrapper">
+								<input
+									type="radio"
+									name="source"
+									id="others"
+									class="radio"
+									value="others"
+								/><label for="others">Others</label>
+							</div>
 						</fieldset>
 					</li>
 				</ul>
-			<button type="submit" class="submit-button standard-button">Submit</button>
+				<button type="submit" class="submit-button standard-button">
+					Submit
+				</button>
 			</form>
 		</main>
 		<footer id="home-footer">
