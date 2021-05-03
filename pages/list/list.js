@@ -31,7 +31,6 @@ async function populatePage(list) {
 	//TODO why is numOnScreen not updated according to await?
 	const numOnScreen = document.querySelectorAll(".preview-anchor").length;
 	listStatus.done = list.length === numOnScreen ? true : false;
-	console.log(listStatus.done);
 	listStatus.index += listStatus.itemsPerPage;
 	toggleButtons();
 	const sorryMessage = document.getElementById("error");
@@ -111,8 +110,8 @@ const maxAgeInput = document.getElementById("max-age");
 const applyButton = document.querySelector(".apply");
 applyButton.addEventListener("click", sortDogs);
 applyButton.addEventListener("click", jumpToTop);
-applyButton.addEventListener("click", autoSave);
 applyButton.addEventListener("click", closeFilter);
+applyButton.addEventListener("click", (e) => e.preventDefault());
 
 function sortDogs() {
 	const sortBy = sortByInput.value;
