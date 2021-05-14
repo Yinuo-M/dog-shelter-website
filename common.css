@@ -237,4 +237,53 @@ footer {
 	background: var(--footer-blue);
 	color: var(--background-white);
 	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	color: rgb(214, 214, 214);
+	padding: 2rem 10rem;
+}
+
+#footer h2 {
+	font-size: 1rem;
+}
+
+#footer p {
+	font-size: 0.9rem;
+	margin: 0.2rem 0;
+}
+
+.credits,
+.disclaimer,
+.attribute {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem 0;
+	max-width: 50rem;
+}
+
+.credits a:hover,
+.attribute a:hover {
+	text-decoration: underline;
+}
+
+.attribute a::before {
+	content: url("./assets/common/GitHub-Mark-Light-32px.png");
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.attribute p {
+	font-weight: bold;
+}
+
+@media (max-width: 850px) {
+	#footer {
+		padding: 2rem 5rem;
+	}
+}
+
+@media (max-width: 500px) {
+	#footer {
+		padding: 2rem 2rem;
+	}
 }
