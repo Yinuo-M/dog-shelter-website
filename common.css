@@ -286,4 +286,10 @@ footer {
 	#footer {
 		padding: 2rem 2rem;
 	}
+
+	.credits,
+	.disclaimer,
+	.attribute {
+		align-items: center;
+	}
 }
