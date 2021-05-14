@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	entry: {
 		common: "./common.js",
+		home: "./index.js",
 		list: "./pages/list/list.js",
 		profile: "./pages/profile/profile.js",
 		form: "./pages/form/form.js",
@@ -20,7 +21,7 @@ module.exports = {
 	plugins: [
 		new HTMLWebpackPlugin({
 			template: "./index.html",
-			chunks: ["common"],
+			chunks: ["common", "home"],
 			filename: "index.html",
 		}),
 		new HTMLWebpackPlugin({

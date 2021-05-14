@@ -1,0 +1,86 @@
+:root {
+	--banner-blue: #b9d9e0;
+	--banner-hover-blue: #91b9c4;
+	--background-white: #f7ede2;
+	--button-pink: #f4acb7;
+	--button-hover-pink: #ce9099;
+	--text-black: #292525;
+	--footer-blue: #161a1d;
+}
+
+/* ANCHOR main page intro */
+
+#intro {
+	background: url("assets/home/home-page-hug-dog.jpg") center/cover,
+		var(--background-white);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	height: calc(100vh - 4.5rem);
+}
+
+#intro::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(21, 22, 22, 0.1);
+}
+
+#home-title {
+	color: white;
+	text-align: center;
+	font-size: 5rem;
+	font-weight: bold;
+	margin: 4rem auto;
+	text-shadow: 1px 1px 10px rgb(49, 48, 48);
+	z-index: 1;
+	animation: fade-in 1s both;
+}
+
+/*ANCHOR homepage specifics*/
+.nav-link.home {
+	font-weight: bold;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+}
+
+.rehome {
+	animation: fade-in 1s 0.7s both;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 580px) {
+	#home-title {
+		font-size: 4rem;
+	}
+}
+
+@media (max-width: 440px) {
+	#home-title {
+		font-size: 3rem;
+	}
+	#nav-title {
+		font-size: 1.5rem;
+	}
+}

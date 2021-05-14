@@ -48,18 +48,6 @@ function closeMenu() {
 	menuButton.setAttribute("aria-expanded", "false");
 }
 
-//TODO trap focus.
-
-function restorePCMenu() {
-	if (document.documentElement.clientWidth > 580) {
-		navList.classList.remove("menu-open");
-		navList.setAttribute("aria-hidden", "false");
-		navList.querySelectorAll("a").forEach((a) => (a.tabIndex = 0));
-		navList.classList.remove("transition");
-		menuButton.removeAttribute("aria-expanded")
-	}
-}
-
 function restorePhoneMenu() {
 	if (document.documentElement.clientWidth <= 580) {
 		navList.setAttribute("aria-hidden", "true");
@@ -68,4 +56,4 @@ function restorePhoneMenu() {
 	}
 }
 
-window.addEventListener("DOMContentLoaded", restorePhoneMenu)
+window.addEventListener("DOMContentLoaded", restorePhoneMenu);
