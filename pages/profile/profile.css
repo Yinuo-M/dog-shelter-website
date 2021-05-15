@@ -206,21 +206,17 @@
 }
 
 .doginalities-list {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	font-size: 1.8rem;
 	padding-top: 1.5rem;
-	flex-wrap: wrap;
-}
-
-.doginalities-wrapper {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .doginalities-item {
-	line-height: 3rem;
+	white-space:nowrap;
+	min-width: 12rem;
+	margin: 0.5rem;
 }
 
 .doginalities-item::before {

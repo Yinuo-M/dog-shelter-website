@@ -63,7 +63,7 @@
 							>You are adopting:<span class="required">*</span></label
 						>
 						<select name="dog" id="dog" required>
-							<option selected disabled value="">Please select a dog</option>
+							<option selected disabled hidden value="">Please select a dog</option>
 						</select>
 					</li>
 					<li class="input-wrapper">
@@ -121,8 +121,7 @@
 					<!--TODO Setting Min, Max and take dog home for date-->
 					<li class="input-wrapper">
 						<label for="start-date"
-							>When would you like to take this dog home?<span
-								class="required"
+							>When would you like to take this dog home?<span class="required"
 								>*</span
 							></label
 						>
@@ -130,8 +129,7 @@
 					</li>
 					<li class="input-wrapper">
 						<label for="reason"
-							>Why do you want to adopt this dog?<span class="required"
-								>*</span
+							>Why do you want to adopt this dog?<span class="required">*</span
 							><span class="requirement">at least 20 words</span></label
 						>
 						<textarea
@@ -148,8 +146,11 @@
 							>Have you had a dog before?<span class="required">*</span></label
 						>
 						<select name="experience" id="experience" required>
-							<option value="yes">Yes</option>
-							<option value="no" selected>No</option>
+							<option value="" disabled hidden selected>Please select</option>
+							<option value="1-2">Yes - one or two</option>
+							<option value="2-5">Yes - three to five</option>
+							<option value="5+">Yes - more than five</option>
+							<option value="no">No</option>
 						</select>
 					</li>
 					<li class="input-wrapper hidden">
@@ -235,7 +236,8 @@
 						>Smashicons</a
 					>,
 					<a href="https://www.flaticon.com/authors/becris" title="Becris"
-						>B,
+						>Becris</a
+					>,
 					<a href="https://www.flaticon.com/authors/google" title="Google"
 						>Google</a
 					>,
@@ -376,7 +378,10 @@
 				<p>All information on this website is fictional.</p>
 			</div>
 			<div class="attribute">
-				<p>Designed and developed by <a href="https://github.com/Yinuo-M">Yinuo Meng</a></p>
+				<p>
+					Designed and developed by
+					<a href="https://github.com/Yinuo-M">Yinuo Meng</a>
+				</p>
 			</div>
 		</footer>
 	</body>
