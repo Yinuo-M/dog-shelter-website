@@ -25,7 +25,7 @@ export default [
 		doginalities: [
 			"Independent",
 			"Adventurous and fun-loving",
-			"likes human company",
+			"Likes human company",
 			"Strong-willed",
 			"Treasures good hygiene",
 			"Good with children",

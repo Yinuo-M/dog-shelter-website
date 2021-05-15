@@ -35,6 +35,31 @@ module.exports = {
 			filename: "Andy-profile.html",
 		}),
 		new HTMLWebpackPlugin({
+			template: "./pages/profile/Aki-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Aki-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Sophie-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Sophie-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Albert-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Albert-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Caramel-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Caramel-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Max-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Max-profile.html",
+		}),
+		new HTMLWebpackPlugin({
 			template: "./pages/form/form.html",
 			chunks: ["common", "form"],
 			filename: "form.html",
