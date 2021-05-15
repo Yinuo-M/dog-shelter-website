@@ -13,6 +13,12 @@
 	--footer-blue: #161a1d;
 }
 
+.nav-link.meet-our-dogs {
+	font-weight: bold;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+}
+
 #profile-main {
 	padding: 3rem;
 	padding-bottom: 4rem;
