@@ -338,3 +338,10 @@ input:focus {
 		font-size: 2rem;
 	}
 }
+
+@media (max-width: 580px) {
+	.nav-link.meet-our-dogs {
+		font-weight: bold;
+		text-decoration: none;
+	}
+}

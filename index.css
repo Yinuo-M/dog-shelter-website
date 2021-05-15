@@ -52,7 +52,7 @@
 	font-weight: bold;
 	text-decoration: underline;
 	text-underline-offset: 8px;
-}
+}	
 
 .rehome {
 	animation: fade-in 1s 0.7s both;
@@ -73,6 +73,10 @@
 @media (max-width: 580px) {
 	#home-title {
 		font-size: 4rem;
+	}
+	.nav-link.home {
+		font-weight: bold;
+		text-decoration: none;
 	}
 }
 
