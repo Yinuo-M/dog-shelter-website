@@ -6,7 +6,6 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 	.BundleAnalyzerPlugin;
-const { GenerateSW } = require("workbox-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
@@ -24,7 +23,6 @@ module.exports = merge(common, {
 	plugins: [
 		new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
 		new BundleAnalyzerPlugin(),
-		new GenerateSW({ clientsClaim: true, skipWaiting: true }),
 	],
 	module: {
 		rules: [
