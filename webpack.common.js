@@ -60,6 +60,51 @@ module.exports = {
 			filename: "Max-profile.html",
 		}),
 		new HTMLWebpackPlugin({
+			template: "./pages/profile/Udon-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Udon-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Kay-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Kay-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Laurel-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Laurel-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Anna-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Anna-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Victor-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Victor-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Doug-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Doug-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Brandon-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Brandon-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Mia-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Mia-profile.html",
+		}),
+		new HTMLWebpackPlugin({
+			template: "./pages/profile/Iona-profile.html",
+			chunks: ["common", "profile"],
+			filename: "Iona-profile.html",
+		}),
+		new HTMLWebpackPlugin({
 			template: "./pages/form/form.html",
 			chunks: ["common", "form"],
 			filename: "form.html",

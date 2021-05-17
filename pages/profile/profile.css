@@ -19,7 +19,7 @@
 	padding: 3rem;
 	padding-bottom: 4rem;
 	margin: 4rem auto;
-	max-width: 65rem;
+	max-width: 75rem;
 	width: 90%;
 	background: rgb(255, 255, 255);
 	border-radius: 15px;
@@ -282,7 +282,7 @@
 	.profile-header {
 		font-size: 3rem;
 	}
-	
+
 	.doginalities-list {
 		font-size: 1.5rem;
 	}
