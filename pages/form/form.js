@@ -59,7 +59,42 @@ function handleSubmit(e) {
 		const firstInvalid = formControls.find((elem) => !elem.checkValidity());
 		firstInvalid.focus();
 	}
+	window.onbeforeunload = null;
 }
+
+//ANCHOR set date input min and max
+const dateInput = document.getElementById("start-date");
+const now = new Date();
+const year = now.getFullYear();
+const month = (now.getMonth() + 1);
+const date = now.getDate();
+
+let nextYear, nextMonth, nextDate;
+
+if (month == 12) {
+	nextYear = year + 1;
+	nextMonth = 1;
+} else {
+	nextYear = year;
+	nextMonth = month + 1;
+}
+
+if (nextMonth == 2 && nextYear%4 == 0) {
+	nextDate = (date > 29)? date - 29 : date;
+	nextMonth = (date > 29)? nextMonth + 1 : nextMonth;
+} else if (nextMonth == 2 && nextYear%4 != 0) {
+	nextDate = (date > 28)? date - 28 : date;
+	nextMonth = (date > 28)? nextMonth + 1 : nextMonth;
+} else {
+	nextDate = date;
+}
+
+
+
+const min = `${year}-${month.toString().padStart(2, "0")}-${date.toString().padStart(2, "0")}`;
+const max = `${nextYear}-${nextMonth.toString().padStart(2, "0")}-${nextDate.toString().padStart(2, "0")}`;
+dateInput.min = min;
+dateInput.max = max;
 
 //ANCHOR check before user leaves
 window.onbeforeunload = function () {
